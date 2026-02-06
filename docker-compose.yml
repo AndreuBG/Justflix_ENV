@@ -1,0 +1,109 @@
+services:
+  catalogo:
+    container_name: catalogo_app
+    build: ../Justflix_Catalogo
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    ports:
+      - 8090:8090
+    volumes:
+      - ../Justflix_Catalogo/maven_cache:/root/.m2
+    env_file:
+      - .env
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/catalogo?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+  mysql_db:
+    container_name: mysql_db
+    image: mysql:8.0
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MYSQL_DATABASE: catalogo
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${MYSQL_USER}", "--password=${MYSQL_PASSWORD}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  ts-multimedia:
+    container_name: ts_multimedia
+    build: ../Justflix_Multimedia
+    volumes:
+      - ../Justflix_Multimedia/src:/app/src
+    ports:
+      - '8080:8080'
+
+  nginx:
+    container_name: nginx_proxy
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../Justflix_Suscripciones/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ../Justflix_Suscripciones/nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      odoo:
+        condition: service_healthy
+  odoo:
+    container_name: odoo_suscripciones
+    build: ../Justflix_Suscripciones
+    env_file:
+      - .env
+    ports:
+      - "8069:8069"
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    environment:
+      - USER=$ODOO_USER
+      - PASSWORD=$ODOO_PASSWORD
+    volumes:
+      - ../Justflix_Suscripciones/extra-addons:/mnt/extra-addons
+      - ../Justflix_Suscripciones/config:/etc/odoo
+      - ../Justflix_Suscripciones/log:/var/log/odoo
+      - odoo-data:/var/lib/odoo
+    healthcheck:
+      test: [ "CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8069/web/login')" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  postgres_db:
+    container_name: odoo_db
+    image: postgres:14
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: pg_isready -U odoo
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  mysql_data:
+  maven_cache:
+  odoo-data:
+  postgres_data:
