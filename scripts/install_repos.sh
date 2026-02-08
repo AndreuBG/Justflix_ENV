@@ -27,3 +27,7 @@ fi
 if [ ! -d "Justflix_Multimedia" ]; then
   git clone https://github.com/AndreuBG/Justflix_Multimedia.git
 fi
+
+bash ./scripts/generate_jwt_keys.sh # Creamos los certificados para el jwt
+
+bash ./scripts/generate_certs.sh # Creamos los certificados para el https

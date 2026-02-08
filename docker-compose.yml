@@ -1,6 +1,5 @@
 services:
   catalogo:
-    container_name: catalogo_app
     build: ../Justflix_Catalogo
     depends_on:
       mysql_db:
@@ -18,9 +17,7 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
 
   mysql_db:
-    container_name: mysql_db
     image: mysql:8.0
-    restart: unless-stopped
     env_file:
       - .env
     environment:
@@ -37,7 +34,6 @@ services:
       start_period: 20s
 
   ts-multimedia:
-    container_name: ts_multimedia
     build: ../Justflix_Multimedia
     volumes:
       - ../Justflix_Multimedia/src:/app/src
@@ -45,7 +41,6 @@ services:
       - '8080:8080'
 
   nginx:
-    container_name: nginx_proxy
     image: nginx:latest
     ports:
       - "80:80"
@@ -57,7 +52,6 @@ services:
       odoo:
         condition: service_healthy
   odoo:
-    container_name: odoo_suscripciones
     build: ../Justflix_Suscripciones
     env_file:
       - .env
@@ -82,7 +76,6 @@ services:
       start_period: 30s
 
   postgres_db:
-    container_name: odoo_db
     image: postgres:14
     env_file:
       - .env
