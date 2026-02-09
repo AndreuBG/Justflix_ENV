@@ -32,16 +32,19 @@ services:
       retries: 5
       start_period: 20s
 
-  ts-multimedia:
-    build: ../Justflix_Multimedia
-    volumes:
-      - ../Justflix_Multimedia/src:/app/src
-      - ../Justflix_Multimedia/public:/app/public
-    environment:
-      - JWT_PUBLIC_KEY_PATH=${JWT_PUBLIC_KEY_PATH}
-      - ALLOW_INSECURE_TLS=${ALLOW_INSECURE_TLS}
-    ports:
-      - '8080:8080'
+  # ELIMINADO POR FALTA DE TIEMPO
+  # Da error al refrescar el token
+
+  # ts-multimedia:
+  #   build: ../Justflix_Multimedia
+  #   volumes:
+  #     - ../Justflix_Multimedia/src:/app/src
+  #     - ../Justflix_Multimedia/public:/app/public
+  #   environment:
+  #     - JWT_PUBLIC_KEY_PATH=${JWT_PUBLIC_KEY_PATH}
+  #     - ALLOW_INSECURE_TLS=${ALLOW_INSECURE_TLS}
+  #   ports:
+  #     - '8080:8080'
 
   nginx:
     image: nginx:latest
@@ -98,5 +101,4 @@ volumes:
   mysql_data:
   maven_cache:
   odoo-data:
-  postgres_data:
-  express_data:
+  postgres_data: # express_data:
