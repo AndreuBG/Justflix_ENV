@@ -20,6 +20,7 @@ services:
       MYSQL_DATABASE: catalogo
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - "3308:3306"
     volumes:
