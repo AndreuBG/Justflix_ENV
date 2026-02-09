@@ -8,8 +8,6 @@ services:
       - 8090:8090
     volumes:
       - ../Justflix_Catalogo/maven_cache:/root/.m2
-    env_file:
-      - .env
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/catalogo?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
@@ -18,16 +16,16 @@ services:
 
   mysql_db:
     image: mysql:8.0
-    env_file:
-      - .env
     environment:
       MYSQL_DATABASE: catalogo
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3308:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${MYSQL_USER}", "--password=${MYSQL_PASSWORD}" ]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${MYSQL_USER}", "--password=${MYSQL_PASSWORD}" ] # Comprueba que el servicio mysql_db esta saludable haciendo ping
       interval: 5s
       timeout: 5s
       retries: 5
@@ -37,8 +35,10 @@ services:
     build: ../Justflix_Multimedia
     volumes:
       - ../Justflix_Multimedia/src:/app/src
-    env_file:
-      - .env
+      - ../Justflix_Multimedia/public:/app/public
+    environment:
+      - JWT_PUBLIC_KEY_PATH=${JWT_PUBLIC_KEY_PATH}
+      - ALLOW_INSECURE_TLS=${ALLOW_INSECURE_TLS}
     ports:
       - '8080:8080'
 
@@ -55,8 +55,6 @@ services:
         condition: service_healthy
   odoo:
     build: ../Justflix_Suscripciones
-    env_file:
-      - .env
     ports:
       - "8069:8069"
     depends_on:
@@ -79,8 +77,6 @@ services:
 
   postgres_db:
     image: postgres:14
-    env_file:
-      - .env
     environment:
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
@@ -102,3 +98,4 @@ volumes:
   maven_cache:
   odoo-data:
   postgres_data:
+  express_data:
