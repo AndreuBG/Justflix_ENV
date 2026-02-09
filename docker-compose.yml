@@ -37,6 +37,8 @@ services:
     build: ../Justflix_Multimedia
     volumes:
       - ../Justflix_Multimedia/src:/app/src
+    env_file:
+      - .env
     ports:
       - '8080:8080'
 
