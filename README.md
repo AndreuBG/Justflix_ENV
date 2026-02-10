@@ -44,14 +44,20 @@ Configuración centralizada de Docker Compose para ejecutar todos los servicios 
    npm run dev
    ```
 
-5.1 **Iniciar reproductor (Flutter):**
+5. **Inicia Odoo:**
+Accede a `https://localhost` y utiliza la ultima copia de seguridad de Odoo para iniciar sesión.
+
+Usuario administrador por defecto -> admin
+Contraseña -> admin
+
+6.1 **Iniciar reproductor (Flutter):**
    ```bash
    cd ../Justflix_Reproductor
    flutter pub get
    flutter run
    ```
 
-5.2 **Iniciar frontend admin (Vue):**
+6.2 **Iniciar frontend admin (Vue):**
    ```bash
    cd ../Justflix_Admin/admin_app
    npm install
