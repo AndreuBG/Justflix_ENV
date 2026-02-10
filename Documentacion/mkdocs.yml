@@ -1,0 +1,10 @@
+site_name: Documentacion de Justflix
+theme:
+  name: material
+nav:
+  - Justflix_ENV: env.md
+  - Catalogo: catalogo.md
+  - Suscripciones: suscripciones.md
+plugins:
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
