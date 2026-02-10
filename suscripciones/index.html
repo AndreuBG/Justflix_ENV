@@ -423,6 +423,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#seguridad-y-control-de-acceso" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -666,6 +677,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#seguridad-y-control-de-acceso" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -772,7 +794,7 @@ El contenedor <code>postgres_db</code> proporciona almacenamiento persistente pa
 </ul>
 <p><a href="https://odoo-community.org/shop/subscription-management-715311#attr=938468">Enlace a su página oficial</a></p>
 <h4 id="modulo-subscription_oca">Módulo <code>subscription_oca</code></h4>
-<p>Implementa la lógica central de suscripciones basada en el módulo de suscripción OCA (Odoo Community Association). Gestiona el ciclo de vida de las suscripciones a través de etapas (<code>draft</code>, <code>pre</code>, <code>in_progress</code>, <code>post</code>), genera facturas recurrentes mediante <strong>cron jobs</strong> y aplica restricciones de negocio.</p>
+<p>Implementa la lógica central de suscripciones basada en el módulo de suscripción OCA (Odoo Community Association). Gestiona el ciclo de vida de las suscripciones a través de etapas, genera facturas recurrentes mediante <strong>cron jobs</strong> y aplica restricciones de negocio.</p>
 <p><strong>Modelos Clave:</strong></p>
 <ul>
 <li><code>sale.subscription</code> - Entidad principal de suscripción<br />
@@ -851,6 +873,17 @@ El contenedor <code>postgres_db</code> proporciona almacenamiento persistente pa
 </tr>
 </tbody>
 </table>
+<h2 id="jwt">JWT</h2>
+<p>El token será cifrado con la clave pública de odoo y su payload contendrá lo siguiente:</p>
+<pre><code>{
+  &quot;sub&quot;: user_id,
+  &quot;iss&quot;: &quot;https://justflix.com/&quot;,
+  &quot;exp&quot;: 1770755813, # Cuando expira el token
+  &quot;username&quot;: username,
+  &quot;has_subscription&quot;: true,
+  &quot;roles&quot;: []
+}
+</code></pre>
 <h2 id="seguridad-y-control-de-acceso">Seguridad y Control de Acceso</h2>
 <p>La seguridad se implementa en múltiples capas:</p>
 <ul>
