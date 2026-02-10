@@ -1,0 +1,1278 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../suscripciones/">
+      
+      
+        <link rel="next" href="../reproductor/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Multimedia - Documentacion de Justflix</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multimedia-typescript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentacion de Justflix" class="md-header__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion de Justflix
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multimedia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentacion de Justflix" class="md-nav__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentacion de Justflix
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justflix_ENV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suscripciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suscripciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimedia
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimedia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidades principales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middlewares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middlewares
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controladores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videocontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        video.controller.ts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="video.controller.ts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-subida-postprocessvideoclean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de subida (postProcessVideoClean)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-del-video-getwatchvideo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización del Video (getWatchVideo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seriecontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serie.controller.ts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="serie.controller.ts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subida-de-miniatura-postthumbvideo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subida de miniatura (postThumbVideo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processvideoservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        processVideoService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createthumbnail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        createThumbnail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starthlsprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        startHlsProcess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocketservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        websocketService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideo-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getVideo (Metadatos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WebSocket
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-y-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización y conexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envio-de-progreso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envío de progreso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapas-principales-del-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapas principales del procesamiento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cierre-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cierre de conexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproductor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproductor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidades principales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middlewares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middlewares
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controladores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videocontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        video.controller.ts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="video.controller.ts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-subida-postprocessvideoclean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de subida (postProcessVideoClean)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-del-video-getwatchvideo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización del Video (getWatchVideo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seriecontrollerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        serie.controller.ts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="serie.controller.ts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subida-de-miniatura-postthumbvideo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subida de miniatura (postThumbVideo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processvideoservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        processVideoService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createthumbnail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        createThumbnail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starthlsprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        startHlsProcess
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocketservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        websocketService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideo-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getVideo (Metadatos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WebSocket
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-y-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización y conexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envio-de-progreso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Envío de progreso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapas-principales-del-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Etapas principales del procesamiento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cierre-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cierre de conexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="multimedia-typescript">Multimedia (TypeScript)</h1>
+<h2 id="capacidades-principales">Capacidades principales</h2>
+<ul>
+<li>
+<p><strong>Subida de vídeo</strong>:Componentes: videoRoutes, inicialVideoService.</p>
+</li>
+<li>
+<p><strong>Conversión a HLS</strong>: conversión asíncrona a segmentos HLS basada en FFmpeg.<br />
+  Componentes: processVideoService, FFmpeg.</p>
+</li>
+<li>
+<p><strong>Generación de miniaturas</strong>: extracción automática de fotogramas de vista previa del vídeo.<br />
+  Componentes: thumbnailService.</p>
+</li>
+<li>
+<p><strong>Streaming de vídeo</strong>: entrega de segmentos HLS autenticada mediante token.<br />
+  Componentes: videoRoutes, middleware refreshToken.</p>
+</li>
+<li>
+<p><strong>Progreso en tiempo real</strong>: actualizaciones del progreso durante el procesamiento mediante WebSocket.<br />
+  Componentes: websocketService.</p>
+</li>
+<li>
+<p><strong>Autenticación por token</strong>: verificación de JWT con comprobaciones de suscripción y roles.<br />
+  Componentes: verifyToken, verifyAdminToken.</p>
+</li>
+<li>
+<p><strong>Renovación de tokens</strong>: renovación de tokens mediante Odoo.<br />
+  Componentes: middleware refreshToken.</p>
+</li>
+<li>
+<p><strong>Gestión de series</strong>: gestión de miniaturas de series.</p>
+</li>
+</ul>
+<h2 id="estructura-del-proyecto">Estructura del proyecto</h2>
+<pre><code class="language-ruby">src/
+├── index.ts
+└── app/
+├── data/
+├── domain/
+├── http/
+│ ├── controllers/ #controladores tanto de video como de serie
+│ ├── routes/ #las rutas de los endpoints de serie y video
+│ └── server.ts
+└── services/ #guardar servicios (websocket y procesamiento de video)
+└── videos/ # servicios para procesar los videos y generar miniaturas
+
+public/
+├── uploads/ # almacenamiento temporal durante la subida inicial
+├── videos/:id/ # HLS permanente (index.m3u8, segmentos .ts)
+├── thumbnails/ # miniaturas de vídeos
+└── thumb_series/ # miniaturas de series
+</code></pre>
+<h2 id="endpoints">Endpoints</h2>
+<ul>
+<li>
+<p><strong>Ruta:</strong> /api/videolist/:id/:file<br />
+<strong>Método HTTP:</strong> GET<br />
+<strong>Middlewares aplicados:</strong> refreshToken, verifyToken<br />
+<strong>Controlador asociado:</strong> getWatchVideo<br />
+<strong>Registro en servidor:</strong> app.use("/api/videolist", videoRoutes)</p>
+</li>
+<li>
+<p><strong>Ruta:</strong> /api/videolist/upload<br />
+<strong>Método HTTP:</strong> POST<br />
+<strong>Middlewares aplicados:</strong> verifyAdminToken<br />
+<strong>Controlador asociado:</strong> postProcessVideoClean<br />
+<strong>Registro en servidor:</strong> app.use("/api/videolist", videoRoutes)</p>
+</li>
+<li>
+<p><strong>Ruta:</strong> /api/videolist/delete/:id<br />
+<strong>Método HTTP:</strong> DELETE<br />
+<strong>Middlewares aplicados:</strong> verifyAdminToken<br />
+<strong>Controlador asociado:</strong> videoDelete<br />
+<strong>Registro en servidor:</strong> app.use("/api/videolist", videoRoutes)</p>
+</li>
+<li>
+<p><strong>Ruta:</strong> /api/serielist/upload<br />
+<strong>Método HTTP:</strong> POST<br />
+<strong>Controlador asociado:</strong> postThumbVideo<br />
+<strong>Registro en servidor:</strong> app.use("/api/serielist", serieRouter)</p>
+</li>
+<li>
+<p><strong>Ruta:</strong> /api/serielist/delete/:id<br />
+<strong>Método HTTP:</strong> DELETE<br />
+<strong>Middlewares aplicados:</strong> verifyAdminToken<br />
+<strong>Controlador asociado:</strong> deleteThumbSerie<br />
+<strong>Registro en servidor:</strong> app.use("/api/serielist", serieRouter)</p>
+</li>
+</ul>
+<h2 id="middlewares">Middlewares</h2>
+<p>Los middlewares de autenticación se implementan en <code>authTokenSub.ts</code>  </p>
+<ul>
+<li><strong>verifyToken:</strong> Verifica JWT y suscripción activa  </li>
+<li><strong>verifyAdminToken:</strong> Verifica JWT y rol de administrador  </li>
+<li><strong>refreshToken:</strong> Refresca tokens próximos a expirar usando Odoo</li>
+</ul>
+<h2 id="controladores">Controladores</h2>
+<h3 id="videocontrollerts">video.controller.ts</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Método HTTP</th>
+<th>Respuestas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postProcessVideoClean</td>
+<td>POST</td>
+<td>202 con metadata; 400/500 en errores</td>
+</tr>
+<tr>
+<td>getWatchVideo</td>
+<td>GET</td>
+<td>404 si no existe; stream con headers adecuados</td>
+</tr>
+<tr>
+<td>videoDelete</td>
+<td>DELETE</td>
+<td>200 si eliminado; 404 si no existe; 500 en errores</td>
+</tr>
+</tbody>
+</table>
+<h4 id="flujo-de-subida-postprocessvideoclean">Flujo de subida (<code>postProcessVideoClean</code>)</h4>
+<ol>
+<li>Validación de <code>req.file</code> </li>
+<li>Llamar al servicio <code>inicialVideoService</code> para crear directorios y extraer metadatos </li>
+<li>Respuesta 202 con <code>videoId</code>, <code>websocketUrl</code>, <code>duration</code>, <code>resolution</code> </li>
+<li>Llamar al segundo servicio <code>processVideoService</code> para la creacion de miniaturas y el procesamiento de los videos</li>
+</ol>
+<h4 id="visualizacion-del-video-getwatchvideo">Visualización del Video (<code>getWatchVideo</code>)</h4>
+<ul>
+<li>Ruta a <code>public/videos/:id/:file</code>  </li>
+<li>Headers: <code>Content-Type</code> según si son el listado de segmentos o los segmentos en sí   </li>
+<li>Usa <code>fs.createReadStream</code> + <code>pipe</code> para streaming eficiente  </li>
+</ul>
+<h3 id="seriecontrollerts">serie.controller.ts</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Método HTTP</th>
+<th>Respuestas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>postThumbVideo</td>
+<td>POST</td>
+<td>200 con idThumb; 400/500 en errores</td>
+</tr>
+<tr>
+<td>deleteThumbSerie</td>
+<td>DELETE</td>
+<td>200 si eliminada; 404 si no existe; 500 en errores</td>
+</tr>
+</tbody>
+</table>
+<h4 id="subida-de-miniatura-postthumbvideo">Subida de miniatura (<code>postThumbVideo</code>)</h4>
+<ul>
+<li>Genera <code>thumbId</code> con <code>Date.now()</code>  </li>
+<li>Guarda en <code>public/thumb_series/${thumbId}.png</code> desde <code>req.file.buffer</code> </li>
+</ul>
+<h2 id="servicios">Servicios</h2>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Archivo</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>processVideoService</td>
+<td>processVideo.service.ts</td>
+<td>Orquesta (metadata → thumbnail → HLS)</td>
+</tr>
+<tr>
+<td>createThumbnail</td>
+<td>thumbnail.service.ts</td>
+<td>Genera miniatura PNG a 1s del vídeo</td>
+</tr>
+<tr>
+<td>startHlsProcess</td>
+<td>ffmpeg.service.ts</td>
+<td>Convierte a HLS con segmentos de 10s</td>
+</tr>
+<tr>
+<td>websocketService</td>
+<td>websocket.service.ts</td>
+<td>Gestiona conexiones WebSocket y envía progreso</td>
+</tr>
+<tr>
+<td>getVideoDuration / getVideoResolution / getVideoMetadata</td>
+<td>getMetadatosVideo.ts</td>
+<td>Extraen metadatos vía ffprobe</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="processvideoservice">processVideoService</h3>
+<p>Orquesta y notifica progreso:  </p>
+<ul>
+<li><strong>metadata (30%)</strong>: Envía duración y resolución obtenidas por <code>inicialVideoService</code>  </li>
+<li><strong>Verificación de FFmpeg</strong>: Aborta si <code>ffmpeg-static</code> no está disponible  </li>
+<li><strong>thumbnail (35-40%)</strong>: Llama a <code>createThumbnail</code>; en caso de error solo lo loguea y continúa </li>
+<li><strong>processing (45-95%)</strong>: Inicia HLS con <code>startHlsProcess</code>  </li>
+</ul>
+<hr />
+<h3 id="createthumbnail">createThumbnail</h3>
+<ul>
+<li>Extrae un frame a 1 segundo y guarda en <code>public/thumbnails/${videoId}.png</code>  </li>
+<li><strong>Comando FFmpeg</strong>: <code>-ss 00:00:01 -i origenPath -frames:v 1 -q:v 2 thumbPath</code>  </li>
+<li>Si FFmpeg falla, elimina archivo parcial y rechaza la promesa  </li>
+<li>En éxito, notifica <code>thumbnail_complete (40%)</code> </li>
+</ul>
+<hr />
+<h3 id="starthlsprocess">startHlsProcess</h3>
+<p>Convierte a HLS con progreso en tiempo real:  </p>
+<ul>
+<li>Parámetros HLS: <code>-hls_time 10 -hls_playlist_type vod -hls_segment_filename index%d.ts</code></li>
+<li>Parsea <code>out_time_ms</code> de stdout para calcular progreso: <code>45 + floor((currentSeconds / duration) * 50)</code>  </li>
+<li>Throttling: solo envía si el porcentaje cambió (<code>progressOld != processVideo</code>)  </li>
+<li>Al finalizar (code 0), limpia temporal y envía <code>complete (100%)</code> </li>
+<li>En error, envía <code>error (0%)</code> con código de salida   </li>
+</ul>
+<hr />
+<h3 id="websocketservice">websocketService</h3>
+<p>Gestiona conexiones por <code>videoId</code>:  </p>
+<ul>
+<li>Al conectar, envía <code>connected (0%)</code>  </li>
+<li><code>sendProgress</code> envía JSON si el socket está <code>OPEN</code>   </li>
+<li>Cierra conexión tras <code>complete/error</code> con 2s de delay </li>
+</ul>
+<hr />
+<h3 id="getvideo-metadatos">getVideo (Metadatos)</h3>
+<ul>
+<li><strong>getVideoDuration</strong>: extrae <code>format.duration</code> en segundos - </li>
+<li><strong>getVideoResolution</strong>: mapea ancho a etiquetas (K4, K2, P1080, etc.) para Springboot</li>
+<li><strong>getVideoMetadata</strong>: devuelve JSON completo de ffprobe </li>
+</ul>
+<h2 id="websocket">WebSocket</h2>
+<p>El servicio WebSocket proporciona <strong>comunicación en tiempo real</strong> durante el procesamiento de vídeos, enviando actualizaciones de progreso a los clientes conectados por <code>videoId</code>.  </p>
+<h3 id="inicializacion-y-conexion">Inicialización y conexión</h3>
+<ul>
+<li>
+<p>En <code>server.ts</code>, se crea un <code>WebSocketServer</code> y se integra con el servidor HTTP mediante el evento <code>upgrade</code>.  </p>
+</li>
+<li>
+<p>Al conectar, el cliente debe incluir <code>videoId</code> en la URL como un parametro.  </p>
+</li>
+<li>
+<p>Se eliminan al cerrar o en caso de error.</p>
+</li>
+</ul>
+<hr />
+<h3 id="envio-de-progreso">Envío de progreso</h3>
+<ul>
+<li>
+<p><code>sendProgress(videoId, data)</code> envía JSON solo si el socket está abierto.  </p>
+</li>
+<li>
+<p><strong>Formato del mensaje:</strong></p>
+</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;stage&quot;: &quot;...&quot;,
+  &quot;progress&quot;: ...,
+  &quot;message&quot;: &quot;...&quot;,
+  &quot;duration?&quot;: ...,
+  &quot;resolution?&quot;: ...
+}
+</code></pre>
+<h3 id="etapas-principales-del-procesamiento">Etapas principales del procesamiento:</h3>
+<ul>
+<li><code>connected(0%)</code></li>
+<li><code>metadata(30%)</code></li>
+<li><code>thumbnail_complete(40%)</code></li>
+<li><code>processing(45-95%)</code></li>
+<li><code>complete(100%)</code>o <code>error(0%)</code></li>
+</ul>
+<h3 id="cierre-de-conexion">Cierre de conexion</h3>
+<p><code>closeConnection(videoId)</code> cierra el socket y lo elimina, este se invoca tras <code>complete</code> o <code>error</code>, con un retardo de 2 segundos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>

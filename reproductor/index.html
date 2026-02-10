@@ -1,0 +1,1680 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../multimedia/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Reproductor - Documentacion de Justflix</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reproductor-flutter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentacion de Justflix" class="md-header__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion de Justflix
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reproductor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentacion de Justflix" class="md-nav__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentacion de Justflix
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justflix_ENV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suscripciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suscripciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multimedia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimedia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproductor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproductor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidades principales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalles técnicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalles técnicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-clean-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura (Clean Architecture)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura (Clean Architecture)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalles de uso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paginas-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paginas &amp; Widgets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paginas &amp; Widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pantalla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujos clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authprovider-riverpod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        authProvider (Riverpod)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-gestionado-authstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado gestionado (AuthState)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-del-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso del provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patrones-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patrones comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de login
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dominio-libdomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dominio (lib/domain/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dominio (lib/domain/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-tipico-en-el-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo típico en el dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infraestructura-libinfrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infraestructura (lib/infrastructure/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infraestructura (lib/infrastructure/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-datos-ejemplo-getvideos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de datos (ejemplo: getVideos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-errores-y-paginacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manejo de errores y paginación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacidades principales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-tecnicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalles técnicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detalles técnicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-clean-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura (Clean Architecture)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura (Clean Architecture)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detalles-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalles de uso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paginas-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paginas &amp; Widgets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paginas &amp; Widgets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pantalla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujos clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authprovider-riverpod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        authProvider (Riverpod)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-gestionado-authstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado gestionado (AuthState)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-del-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uso del provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso del provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patrones-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patrones comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de login
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dominio-libdomain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dominio (lib/domain/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dominio (lib/domain/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-tipico-en-el-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo típico en el dominio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infraestructura-libinfrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infraestructura (lib/infrastructure/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infraestructura (lib/infrastructure/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-clave_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-de-datos-ejemplo-getvideos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de datos (ejemplo: getVideos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-errores-y-paginacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manejo de errores y paginación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reproductor-flutter">Reproductor (Flutter)</h1>
+<h2 id="capacidades-principales">Capacidades principales</h2>
+<ul>
+<li>
+<p><strong>Autenticación y sesión</strong>
+    -Mediante Odoo con <code>access-token</code> y <code>refres-token</code></p>
+</li>
+<li>
+<p><strong>Búsqueda de contenido</strong></p>
+<ul>
+<li>Tanto resultados como sugestiones</li>
+</ul>
+</li>
+<li>
+<p><strong>Reproducción de vídeo</strong></p>
+</li>
+<li>Visualización de video autenticado</li>
+<li>Refresco de token</li>
+<li>Bloqueo de pantalla activo durante reproducción</li>
+<li>
+<p>Control de orientación (vertical / horizontal)  </p>
+</li>
+<li>
+<p><strong>Multiplataforma y UI</strong></p>
+</li>
+<li>Soporte Android / Web</li>
+<li>Tema claro / oscuro dinámico</li>
+<li>
+<p>Orientación forzada a vertical en la app  `</p>
+</li>
+<li>
+<p><strong>Arquitectura y estado</strong></p>
+</li>
+<li>Clean Architecture (Presentation / Domain / Infrastructure)</li>
+<li>Estado reactivo con Riverpod para el login y globalización de los atributos del usuario</li>
+</ul>
+<hr />
+<h2 id="detalles-tecnicos">Detalles técnicos</h2>
+<ul>
+<li><strong>Vídeo</strong></li>
+<li>Usa <code>video_player</code> + <code>chewie</code> para controles</li>
+<li>Cabeceras requeridas:<ul>
+<li><code>Authorization: Bearer &lt;token&gt;</code></li>
+<li><code>x-refresh-token</code></li>
+</ul>
+</li>
+<li>Si el token expira (401):<ul>
+<li>Se refresca automáticamente en <code>/api/update/access-token</code></li>
+</ul>
+</li>
+<li><strong>Búsqueda</strong></li>
+<li>La búsqueda usa el endpoint:<br />
+<code>/catalogo/series/titulo/{encoded}</code></li>
+<li>Paginación:<ul>
+<li><code>page: 0</code></li>
+<li><code>size: 8</code> comodidad el usuario lo podria tapar el teclado si fuera mayor</li>
+</ul>
+</li>
+<li>Las entidades se mapean a <code>Map&lt;String, dynamic&gt;</code> para la UI  </li>
+<li><strong>Navegación</strong></li>
+<li>Desde <code>SeriesScreen</code> se accede a:<ul>
+<li><code>SeriesDetallScreen</code> (lista de episodios)</li>
+<li><code>VideoPlayerScreen</code> (reproducción)  </li>
+</ul>
+</li>
+<li><strong>Configuración</strong></li>
+<li>Orientación vertical forzada</li>
+<li>Tema configurado con Material 3</li>
+<li>Host dinámico <code>appId</code>:<ul>
+<li><code>localhost</code> en Web</li>
+<li>IP configurable en móvil  </li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="notes">Notes</h3>
+<ul>
+<li>
+<p>La app fuerza <strong>orientación vertical</strong> en toda la interfaz, excepto durante la reproducción en pantalla completa, que cambia a horizontal.  </p>
+</li>
+<li>
+<p>El <strong>modo invitado</strong> permite navegar sin autenticación, pero la reproducción puede estar limitada por el backend (<code>403 Forbidden</code>).  </p>
+</li>
+<li>
+<p>Los <strong>tokens JWT</strong> se almacenan y se exponen globalmente a través de <code>authProvider</code>.</p>
+</li>
+</ul>
+<h2 id="arquitectura">Arquitectura</h2>
+<p>La aplicación sigue <strong>Clean Architecture</strong> con tres capas bien definidas:</p>
+<ul>
+<li><code>lib/presentation</code></li>
+<li><code>lib/domain</code></li>
+<li><code>lib/infrastructure</code></li>
+</ul>
+<p>Utiliza <strong>inyección de dependencias manual en <code>main()</code></strong> y <strong>estado reactivo con Riverpod</strong>.  </p>
+<hr />
+<h2 id="estructura-del-proyecto">Estructura del proyecto</h2>
+<pre><code class="language-ruby">lib/  
+├── main.dart                     # Inyección de dependecias, estilos y ProviderScope  
+├── presentation/  
+│   ├── screens/                  # Vistas principales  
+│   │   ├── log_in_screen.dart  
+│   │   ├── series_screen.dart  
+│   │   ├── serie_detalls_screen.dart  
+│   │   └── video_player_screen.dart  
+│   ├── widgets/                  # Componentes reutilizables  
+│   │   ├── my_container_widget.dart  
+│   │   └── ...  
+│   └── delegates/                # Delegadode busqueda de series 
+│       └── search_series_delegate.dart  
+├── domain/  
+│   ├── entities/                 # Entidades  
+│   │   ├── Video.dart  
+│   │   ├── Serie.dart  
+│   │   ├── User.dart  
+│   │   └── page.dart  
+│   ├── repositories/             # Interficies (repositorios abstractos)  
+│   │   ├── videos_repositori.dart  
+│   │   ├── series_repositori.dart  
+│   │   └── user_repository.dart  
+│   └── usecase/                  # Casos de uso  
+│       ├── GetVideoUseCase.dart  
+│       ├── GetSeriesUseCase.dart  
+│       └── login_user_usecase.dart  
+└── infrastructure/  
+    ├── data_sources/             # APIs
+    │   ├── videos_api.dart  
+    │   ├── series_api.dart  
+    │   └── auth_remote_data_source.dart  
+    ├── repository/               # Implementaciones de repositorios  
+    │   ├── videos_repository_impl.dart  
+    │   ├── series_repository_impl.dart  
+    │   └── user_repository_impl.dart  
+    └── mappers/                  # Mapeadores 
+        ├── Video_mapper.dart  
+        ├── serie_mapper.dart  
+        └── page_mapper.dart  
+</code></pre>
+<hr />
+<h2 id="arquitectura-clean-architecture">Arquitectura (Clean Architecture)</h2>
+<h3 id="capas">Capas</h3>
+<ul>
+<li><strong>Presentation</strong></li>
+<li>Consume <strong>casos de uso</strong> y <strong>entidades</strong></li>
+<li>No depende de Infrastructure</li>
+<li>
+<p>La lógica de UI</p>
+</li>
+<li>
+<p><strong>Domain</strong></p>
+</li>
+<li>Núcleo de la aplicación</li>
+<li>
+<p>Contiene:</p>
+<ul>
+<li>Entidades (<code>Video</code>, <code>Serie</code>, <code>User</code>)</li>
+<li>Interfaces de repositorio</li>
+<li>Casos de uso</li>
+</ul>
+</li>
+<li>
+<p><strong>Infrastructure</strong></p>
+<ul>
+<li>Llamadas a APIs</li>
+<li>Repositorios concretos</li>
+<li>Mappers</li>
+</ul>
+</li>
+<li>Depende de <strong>Domain</strong></li>
+<li>Ejemplo:<ul>
+<li><code>VideoRepositoryImpl</code> implementa <code>VideoRepository</code> y usa <code>VideosApi</code> y <code>VideoMapper</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="idea-clave">Idea clave</h3>
+<p>La UI (<strong>Presentation</strong>) nunca conoce detalles de red o persistencia.<br />
+El <strong>Domain</strong> define qué se puede hacer.<br />
+La <strong>Infrastructure</strong> decide cómo se hace.</p>
+<h2 id="detalles-de-uso">Detalles de uso</h2>
+<ul>
+<li><strong>Paginación</strong></li>
+<li>Los endpoints de listado usan:<ul>
+<li><code>?page={n}&amp;size={m}</code></li>
+</ul>
+</li>
+<li><strong>Búsqueda</strong></li>
+<li>
+<p>La búsqueda por título:</p>
+<ul>
+<li>Llama a <code>/catalogo/series/titulo/{encoded}</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Reproduccion</strong></p>
+</li>
+<li>Construcción de URL:<ul>
+<li><code>http://{appId}:8080/api/videolist/{id}/index.m3u8</code></li>
+</ul>
+</li>
+<li>
+<p>Acceso mediante cabeceras:</p>
+<ul>
+<li><code>Authorization: Bearer {token}</code></li>
+<li><code>x-refresh-token: {refreshToken}</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Refresco de token</strong></p>
+</li>
+<li>Si el la peticion previa a la reproduccion responde <code>401</code>:<ul>
+<li>Se ejecuta <code>POST /api/update/access-token</code></li>
+<li>Se envía <code>{ refresh_token }</code> en el body</li>
+<li>Se actualiza el provider con el nuevo <code>access_token</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="paginas-widgets">Paginas &amp; Widgets</h2>
+<h3 id="pantalla">Pantalla</h3>
+<table>
+<thead>
+<tr>
+<th>Screen</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LogInScreen</td>
+<td>Autenticación (email/contraseña), modo invitado y registro externo</td>
+</tr>
+<tr>
+<td>SeriesScreen</td>
+<td>Pantalla principal con carrusel de destacados, lista de series y últimos videos</td>
+</tr>
+<tr>
+<td>AllSeriesSrchScreen</td>
+<td>Listado paginado infinito de todo el catálogo</td>
+</tr>
+<tr>
+<td>SeriesDetallScreen</td>
+<td>Detalle de serie con listado de episodios</td>
+</tr>
+<tr>
+<td>VideoPlayerScreen</td>
+<td>Reproductor con metadatos del video</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="widgets">Widgets</h3>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JustflixAppBar</td>
+<td>Barra superior con logo, búsqueda y botón de retroceso</td>
+</tr>
+<tr>
+<td>MyContainerWidget</td>
+<td>Wrapper del reproductor de video (Chewie) con gestión de token</td>
+</tr>
+<tr>
+<td>AllSeriesWidget</td>
+<td>GridView infinito con paginación y <code>ScrollController</code></td>
+</tr>
+<tr>
+<td>SearchSeriesDelegate</td>
+<td>Búsqueda nativa con sugerencias y resultados</td>
+</tr>
+<tr>
+<td>FeaturedCarouselWidget</td>
+<td>Carrusel de contenido destacado</td>
+</tr>
+<tr>
+<td>CarouselVideoLatestWidget</td>
+<td>Carrusel de últimos videos</td>
+</tr>
+<tr>
+<td>MyListSeriesWidget</td>
+<td>Lista horizontal de series</td>
+</tr>
+<tr>
+<td>AppNavigationBar</td>
+<td>Barra de navegación inferior (Series / Todas)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flujos-clave">Flujos clave</h3>
+<ul>
+<li><strong>Login / Invitado → SeriesScreen</strong></li>
+<li>
+<p>Navegación inicial tras autenticación o acceso como invitado mediante <code>pushReplacement</code>.</p>
+</li>
+<li>
+<p><strong>Tocar una serie → SeriesDetallScreen</strong></p>
+</li>
+<li>Abre la pantalla de detalle de la serie.</li>
+<li>
+<p>Se pasa la información como <code>Map&lt;String, dynamic&gt;</code> para desacoplar la UI del dominio.</p>
+</li>
+<li>
+<p><strong>Tocar un episodio → VideoPlayerScreen</strong></p>
+</li>
+<li>Inicia la reproducción del episodio seleccionado.</li>
+<li>
+<p>Se pasa el mapa del episodio (<code>film map</code>) al reproductor.</p>
+</li>
+<li>
+<p><strong>Tocar el logo en el AppBar → SeriesScreen</strong></p>
+</li>
+<li>Retorna al hub principal desde cualquier pantalla.</li>
+<li>Navegación mediante <code>pushReplacement</code>.</li>
+</ul>
+<hr />
+<h3 id="notas">Notas</h3>
+<ul>
+<li>Los widgets de lista convierten entidades del dominio a <code>Map&lt;String, dynamic&gt;</code> para desacoplar la UI de las entidades de <code>domain</code>.</li>
+<li>La búsqueda y el listado infinito utilizan <code>FutureBuilder</code> y <code>ScrollController</code> con manejo de estados (<code>loading</code>, <code>error</code>, <code>empty</code>).</li>
+<li><code>JustflixAppBar</code> actúa como punto de entrada tanto a la búsqueda como al home desde múltiples pantallas.</li>
+</ul>
+<h2 id="provider">Provider</h2>
+<h3 id="authprovider-riverpod">authProvider (Riverpod)</h3>
+<ul>
+<li><strong>Nombre:</strong> <code>authProvider</code></li>
+<li><strong>Tipo:</strong> <code>Notifier&lt;AuthNotifier, AuthState&gt;</code></li>
+<li><strong>Responsabilidad:</strong> Gestionar el estado de autenticación y exponer acciones de login y refresco de token</li>
+</ul>
+<hr />
+<h3 id="estado-gestionado-authstate">Estado gestionado (AuthState)</h3>
+<ul>
+<li><code>user?</code>: Usuario autenticado</li>
+<li><code>token?</code>: Access token JWT</li>
+<li><code>refreshToken?</code>: Refresh token</li>
+<li><code>loading</code>: Indica operación en curso (login / refresh)</li>
+<li><code>error?</code>: Mensaje de error en caso de fallo</li>
+</ul>
+<hr />
+<h3 id="uso-del-provider">Uso del provider</h3>
+<h4 id="patrones-comunes">Patrones comunes</h4>
+<ul>
+<li><strong>ref.watch</strong></li>
+<li>Observa el estado y reconstruye widgets</li>
+<li>
+<p>Ejemplo: deshabilitar botón durante login cuando <code>loading == true</code></p>
+</li>
+<li>
+<p><strong>ref.read</strong></p>
+</li>
+<li>Lee el provider sin observar cambios</li>
+<li>Usado para ejecutar acciones</li>
+<li>
+<p>Ejemplo:</p>
+<ul>
+<li><code>ref.read(authProvider.notifier).login(...)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>ref.listen</strong></p>
+</li>
+<li>Reacciona a cambios de estado sin reconstruir la UI</li>
+<li>Usado para navegación y mostrar errores</li>
+</ul>
+<hr />
+<h3 id="flujo-de-login">Flujo de login</h3>
+<ul>
+<li>El usuario introduce email y contraseña y pulsa <strong>Acceder</strong></li>
+<li><code>Datos.login()</code>:</li>
+<li>Valida campos</li>
+<li>Llama a:<ul>
+<li><code>authProvider.notifier.login(() =&gt; usecase(email, password))</code></li>
+</ul>
+</li>
+<li>El provider:</li>
+<li>Ejecuta <code>LoginUserUsecase</code></li>
+<li>Obtiene un <code>User</code></li>
+<li>Actualiza <code>AuthState</code></li>
+<li><code>ref.listen</code>:</li>
+<li>Detecta <code>next.user != null</code></li>
+<li>Navega a <code>SeriesScree</code></li>
+</ul>
+<h2 id="dominio-libdomain">Dominio (<code>lib/domain/</code>)</h2>
+<h3 id="componentes-clave">Componentes clave</h3>
+<ul>
+<li><strong>Entidades</strong></li>
+<li>Ejemplos: <code>Video</code>, <code>Serie</code>, <code>User</code>, <code>PageModel&lt;T&gt;</code></li>
+<li>
+<p>Responsabilidad:</p>
+<ul>
+<li>Modelos de negocio puros</li>
+<li>Sin dependencias externas ni lógica de infraestructura</li>
+</ul>
+</li>
+<li>
+<p><strong>Contratos (interfaces de repositorio)</strong></p>
+</li>
+<li>Ejemplos: <code>VideoRepository</code>, <code>SerieRepository</code>, <code>UserRepository</code></li>
+<li>
+<p>Responsabilidad:</p>
+<ul>
+<li>Definir qué operaciones de datos existen</li>
+<li>No contienen implementación</li>
+<li>Aíslan el dominio de la infraestructura</li>
+</ul>
+</li>
+<li>
+<p><strong>Casos de uso</strong></p>
+</li>
+<li>Ejemplos: <code>GetVideosUseCase</code>, <code>GetSeriesUseCase</code>, <code>LoginUserUsecase</code></li>
+<li>Responsabilidad:<ul>
+<li>Exponer una API simple a la capa de presentación</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="flujo-tipico-en-el-dominio">Flujo típico en el dominio</h3>
+<ul>
+<li>Un <strong>caso de uso</strong>:</li>
+<li>Recibe una <strong>interfaz de repositorio</strong> por constructor</li>
+<li>El caso de uso:</li>
+<li>Invoca métodos del repositorio (ej. <code>getVideos(page, size)</code>)</li>
+<li>El repositorio:</li>
+<li>Devuelve <strong>entidades de dominio</strong><ul>
+<li>Ejemplo: <code>PageModel&lt;Video&gt;</code></li>
+</ul>
+</li>
+<li>El caso de uso:</li>
+<li>Retorna esas entidades a la capa de presentación</li>
+</ul>
+<hr />
+<h2 id="infraestructura-libinfrastructure">Infraestructura (<code>lib/infrastructure/</code>)</h2>
+<h3 id="componentes-clave_1">Componentes clave</h3>
+<ul>
+<li><strong>Data Sources</strong></li>
+<li>Ejemplos: <code>VideosApi</code>, <code>SeriesApi</code>, <code>AuthRemoteDataSource</code></li>
+<li>
+<p>Responsabilidad:</p>
+<ul>
+<li>Comunicación HTTP directa con el backend</li>
+<li>Manejo de endpoints REST</li>
+<li>Devuelven <code>Map&lt;String, dynamic&gt;</code> (JSON crudo)</li>
+</ul>
+</li>
+<li>
+<p><strong>Repositorios (implementaciones)</strong></p>
+</li>
+<li>Ejemplos: <code>VideoRepositoryImpl</code>, <code>SerieRepositoryImpl</code></li>
+<li>
+<p>Responsabilidad:</p>
+<ul>
+<li>Implementar los contratos definidos en el dominio</li>
+<li>Orquestar llamadas a APIs + mappers</li>
+<li>Centralizar lógica de errores y paginación</li>
+</ul>
+</li>
+<li>
+<p><strong>Mappers</strong></p>
+</li>
+<li>Ejemplos: <code>VideoMapper</code>, <code>SerieMapper</code>, <code>PageMapper</code></li>
+<li>Responsabilidad:<ul>
+<li>Convertir JSON ↔ entidades de dominio</li>
+<li>Aislar al dominio del formato del backend</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="flujo-de-datos-ejemplo-getvideos">Flujo de datos (ejemplo: <code>getVideos</code>)</h3>
+<ul>
+<li><code>VideoRepositoryImpl.getVideos(page, size)</code>:</li>
+<li>
+<p>Llama a <code>VideosApi.getVideos(page, size)</code></p>
+</li>
+<li>
+<p><code>VideosApi</code>:</p>
+</li>
+<li>Hace HTTP GET a:<ul>
+<li><code>/catalogo/videos?page=X&amp;size=Y</code></li>
+</ul>
+</li>
+<li>
+<p>Devuelve JSON</p>
+</li>
+<li>
+<p>El repositorio:</p>
+</li>
+<li>Usa:<ul>
+<li><code>PageMapper.fromJson(json, VideoMapper.fromJson)</code></li>
+</ul>
+</li>
+<li>
+<p>Convierte el JSON en <code>PageModel&lt;Video&gt;</code></p>
+</li>
+<li>
+<p>El caso de uso:</p>
+</li>
+<li>Recibe la página de entidades</li>
+<li>La devuelve a la UI sin exponer detalles de infraestructura</li>
+</ul>
+<hr />
+<h3 id="manejo-de-errores-y-paginacion">Manejo de errores y paginación</h3>
+<ul>
+<li><strong>Errores</strong></li>
+<li>Si ocurre un error HTTP o de parsing:<ul>
+<li>El repositorio devuelve una página vacía</li>
+<li>Conserva metadatos de paginación</li>
+</ul>
+</li>
+<li>
+<p>Objetivo:</p>
+<ul>
+<li>No romper la UI</li>
+</ul>
+</li>
+<li>
+<p><strong>Paginación</strong></p>
+</li>
+<li>Los endpoints aceptan:<ul>
+<li><code>page</code></li>
+<li><code>size</code></li>
+</ul>
+</li>
+<li><code>PageModel</code> incluye:<ul>
+<li><code>totalElements</code></li>
+<li><code>totalPages</code></li>
+<li><code>first</code></li>
+<li><code>last</code></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>

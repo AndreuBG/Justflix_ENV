@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
         <link rel="next" href="../catalogo/">
       
@@ -155,6 +157,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -229,22 +258,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-del-sistema" class="md-nav__link">
+  <a href="#scripts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes del Sistema
+        Scripts
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Componentes del Sistema">
+    <nav class="md-nav" aria-label="Scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#servicios-backend" class="md-nav__link">
+  <a href="#installsh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Servicios Backend
+        install.sh
       
     </span>
   </a>
@@ -252,10 +281,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#capa-de-datos" class="md-nav__link">
+  <a href="#generate_certs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Capa de Datos
+        generate_certs
       
     </span>
   </a>
@@ -263,10 +292,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aplicaciones-cliente" class="md-nav__link">
+  <a href="#generate_jwt_keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aplicaciones Cliente
+        generate_jwt_keys
       
     </span>
   </a>
@@ -340,6 +369,60 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multimedia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimedia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproductor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproductor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -378,22 +461,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-del-sistema" class="md-nav__link">
+  <a href="#scripts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes del Sistema
+        Scripts
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Componentes del Sistema">
+    <nav class="md-nav" aria-label="Scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#servicios-backend" class="md-nav__link">
+  <a href="#installsh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Servicios Backend
+        install.sh
       
     </span>
   </a>
@@ -401,10 +484,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#capa-de-datos" class="md-nav__link">
+  <a href="#generate_certs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Capa de Datos
+        generate_certs
       
     </span>
   </a>
@@ -412,10 +495,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aplicaciones-cliente" class="md-nav__link">
+  <a href="#generate_jwt_keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aplicaciones Cliente
+        generate_jwt_keys
       
     </span>
   </a>
@@ -455,95 +538,13 @@
 <li>Define la topología de red y la estrategia de persistencia de datos  </li>
 </ul>
 <p>El repositorio actúa como <strong>"meta-repositorio"</strong> que coordina seis repositorios Git separados que contienen el código de aplicación real, aplicaciones cliente e implementaciones de servicios.</p>
-<h2 id="componentes-del-sistema">Componentes del Sistema</h2>
-<p>La plataforma Justflix consiste en los siguientes <strong>componentes principales</strong>, todos orquestados por Justflix_ENV:</p>
-<h3 id="servicios-backend">Servicios Backend</h3>
-<table>
-<thead>
-<tr>
-<th>Servicio</th>
-<th>Tecnología</th>
-<th>Puerto</th>
-<th>Propósito</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>catalogo</td>
-<td>Spring Boot + Java</td>
-<td>8090</td>
-<td>Gestión del catálogo de contenido y metadatos</td>
-</tr>
-<tr>
-<td>ts-multimedia</td>
-<td>Node.js/TypeScript</td>
-<td>8080</td>
-<td>Streaming de medios y entrega de contenido</td>
-</tr>
-<tr>
-<td>odoo</td>
-<td>Python (Odoo ERP)</td>
-<td>8069</td>
-<td>Gestión de suscripciones y autenticación</td>
-</tr>
-<tr>
-<td>nginx</td>
-<td>Nginx</td>
-<td>80, 443</td>
-<td>Proxy inverso con terminación SSL</td>
-</tr>
-</tbody>
-</table>
-<h3 id="capa-de-datos">Capa de Datos</h3>
-<table>
-<thead>
-<tr>
-<th>Base de Datos</th>
-<th>Tipo</th>
-<th>Puerto</th>
-<th>Usado por</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mysql_db</td>
-<td>MySQL 8.0</td>
-<td>3308</td>
-<td>Servicio catalogo</td>
-</tr>
-<tr>
-<td>postgres_db</td>
-<td>PostgreSQL 14</td>
-<td>5432</td>
-<td>Servicio Odoo</td>
-</tr>
-</tbody>
-</table>
-<h3 id="aplicaciones-cliente">Aplicaciones Cliente</h3>
-<table>
-<thead>
-<tr>
-<th>Aplicación</th>
-<th>Tecnología</th>
-<th>Propósito</th>
-<th>Repositorio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Admin Dashboard</td>
-<td>Vue.js</td>
-<td>Interfaz de gestión de contenido</td>
-<td>Justflix_Admin</td>
-</tr>
-<tr>
-<td>Player App</td>
-<td>Flutter</td>
-<td>Aplicación de streaming para usuarios finales</td>
-<td>Justflix_Reproductor</td>
-</tr>
-</tbody>
-</table>
+<h2 id="scripts">Scripts</h2>
+<h3 id="installsh">install.sh</h3>
+<p>Sirve para instalar todos los repositorios y utilizar el resto de scripts para la configuración del proyecto.</p>
+<h3 id="generate_certs">generate_certs</h3>
+<p>Llama a los scripts del catalogo y de odoo, generando sus certificados necesarios para el uso de https.</p>
+<h3 id="generate_jwt_keys">generate_jwt_keys</h3>
+<p>Utiliza el script de odoo para que genere un par de claves para encriptar los tokens. Luego, copiar la clave public a un directorio del catalogo (<code>/src/main/resources/jwt-key</code>) y un directorio del backend multimedia (<code>/src/jwt_key</code>), que utilizarán para verificar los tokens.</p>
 
 
 
