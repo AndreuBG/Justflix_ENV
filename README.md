@@ -53,7 +53,7 @@ Accede a `https://localhost` y utiliza la ultima copia de seguridad de Odoo para
 
 > [!NOTE]  
 > Correo : admin@gmail.com  
-> Contraseña : admin
+> Contraseña : admin  
 > Admin password : odoo123
 
 6.1 **Iniciar reproductor (Flutter):**
@@ -69,7 +69,7 @@ cd ../Justflix_Admin/admin_app
 npm install
 npm run dev
 ```
-7. **Cambiar contraseñas:**
+7. **Cambiar contraseñas:** *(Opcional)*
 
 * Cambiar variables en .env
 * Cambiar odoo.conf en carpeta config para que coincida con las variables de .env
