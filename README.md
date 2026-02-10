@@ -21,58 +21,59 @@ Configuración centralizada de Docker Compose para ejecutar todos los servicios 
 
 ## Instalación Rápida
 
-1. **Instala Mkcert:**
+1. **Instala Mkcert (Linux):**
    ```bash
    sudo apt install mkcert
    ```
 
-2. **Clona todos los repositorios necesarios :**
+2. **Clona todos los repositorios necesarios:**
 
 > [!IMPORTANT]  
-> Ejecutar el script desde Justflix_ENV
+> Ejecutar el script desde la carpeta Justflix_ENV
 
-   ```bash
-   ./scripts/install.sh
-   ```
+```bash
+./scripts/install.sh
+```
 
 3. **Inicia casi todos los servicios:**
-   ```bash
-   docker compose up -d --build
-   ```
+```bash
+docker compose up -d --build
+```
 
 4. **Inicia servidor multimedia (express):**
-   ```bash
-   cd ../Justflix_Multimedia
-   npm install
-   npm run build
-   npm start
-   ```
+```bash
+cd ../Justflix_Multimedia
+npm install
+npm run build
+npm start
+```
 
 5. **Inicia Odoo:**
 Accede a `https://localhost` y utiliza la ultima copia de seguridad de Odoo para iniciar sesión.
 
 > [!NOTE]  
-> Correo : admin@gmail.com
+> Correo : admin@gmail.com  
 > Contraseña : admin
-> Cambiar info al iniciar sesión
+> Admin password : odoo123
 
 6.1 **Iniciar reproductor (Flutter):**
-   ```bash
-   cd ../Justflix_Reproductor
-   flutter pub get
-   flutter run
-   ```
+```bash
+cd ../Justflix_Reproductor
+flutter pub get
+flutter run
+```
 
 6.2 **Iniciar frontend admin (Vue):**
-   ```bash
-   cd ../Justflix_Admin/admin_app
-   npm install
-   npm run dev
-   ```
+```bash
+cd ../Justflix_Admin/admin_app
+npm install
+npm run dev
+```
 7. **Cambiar contraseñas:**
 
 * Cambiar variables en .env
 * Cambiar odoo.conf en carpeta config para que coincida con las variables de .env
+* Cambiar contraseña y correo del usuario administrador de Odoo
 
 
 ## URLs de Acceso
