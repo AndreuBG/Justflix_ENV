@@ -1,7 +1,7 @@
 # Inicio
 
 ## Proposito
-El proposito de la aplicacion es crear una plataforma de streaming, que gestione usuarios, suscriptores y administradores. Que proporcionará un listado de series y videos.
+El proposito de la aplicacion es crear una plataforma de streaming, que gestione usuarios. Proporcionará un listado de series y videos, los cuales se podrán reproducir en el reproductor de flutter, mientras tengas una suscripcion. Los videos y series se podrán crear, editar y eliminar desde el frontend del admin, siendo necesario tener un token con el rol de "admin".
 
 ## Componentes del Sistema
 La plataforma Justflix consiste en los siguientes **componentes principales**, todos orquestados por Justflix_ENV:

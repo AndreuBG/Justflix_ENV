@@ -40,7 +40,7 @@ Proporciona autenticación basada en JWT para acceso a la API. Implementa cripto
 
 
 #### Módulo `subscription_oca`
-Implementa la lógica central de suscripciones basada en el módulo de suscripción OCA (Odoo Community Association). Gestiona el ciclo de vida de las suscripciones a través de etapas (`draft`, `pre`, `in_progress`, `post`), genera facturas recurrentes mediante **cron jobs** y aplica restricciones de negocio.
+Implementa la lógica central de suscripciones basada en el módulo de suscripción OCA (Odoo Community Association). Gestiona el ciclo de vida de las suscripciones a través de etapas, genera facturas recurrentes mediante **cron jobs** y aplica restricciones de negocio.
 
 **Modelos Clave:**
 
@@ -82,6 +82,19 @@ La mayoría de los endpoints usan `auth: none` para permitir operaciones de toke
 | /api/update/refresh-token     | POST   | jwt (requiere Authorization: Bearer <access_token>) | Rota el refresh token (requiere access token válido)            | {refresh_token}                  | {status: done, refreshToken}      | 400/401: token no proporcionado o inválido (`api_uth.py:81-108`) |
 | /api/revoke/token             | POST   | none                                               | Revoca el refresh token (logout)                                 | {refresh_token}                  | {status: success, logged_out: 1} | 400/401: token no proporcionado o inválido (`api_uth.py:110-125`) |
 
+## JWT
+El token será cifrado con la clave pública de odoo y su payload contendrá lo siguiente:
+
+```
+{
+  "sub": user_id,
+  "iss": "https://justflix.com/",
+  "exp": 1770755813, # Cuando expira el token
+  "username": username,
+  "has_subscription": true,
+  "roles": []
+}
+```
 
 ## Seguridad y Control de Acceso
 La seguridad se implementa en múltiples capas:
