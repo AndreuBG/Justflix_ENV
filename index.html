@@ -1,0 +1,522 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Documentacion de Justflix</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inicio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Documentacion de Justflix" class="md-header__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion de Justflix
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Documentacion de Justflix" class="md-nav__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentacion de Justflix
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justflix_ENV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suscripciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suscripciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposito
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servicios Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicaciones Cliente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujos-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujos Generales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flujos Generales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inicio">Inicio</h1>
+<h2 id="proposito">Proposito</h2>
+<p>El proposito de la aplicacion es crear una plataforma de streaming, que gestione usuarios, suscriptores y administradores. Que proporcionará un listado de series y videos.</p>
+<h2 id="componentes-del-sistema">Componentes del Sistema</h2>
+<p>La plataforma Justflix consiste en los siguientes <strong>componentes principales</strong>, todos orquestados por Justflix_ENV:</p>
+<h3 id="servicios-backend">Servicios Backend</h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tecnología</th>
+<th>Puerto</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>catalogo</td>
+<td>Spring Boot + Java</td>
+<td>8090</td>
+<td>Gestión del catálogo de contenido y metadatos</td>
+</tr>
+<tr>
+<td>ts-multimedia</td>
+<td>Node.js/TypeScript</td>
+<td>8080</td>
+<td>Streaming de medios y entrega de contenido</td>
+</tr>
+<tr>
+<td>odoo</td>
+<td>Python (Odoo ERP)</td>
+<td>8069</td>
+<td>Gestión de suscripciones y autenticación</td>
+</tr>
+<tr>
+<td>nginx</td>
+<td>Nginx</td>
+<td>80, 443</td>
+<td>Proxy inverso con terminación SSL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capa-de-datos">Capa de Datos</h3>
+<table>
+<thead>
+<tr>
+<th>Base de Datos</th>
+<th>Tipo</th>
+<th>Puerto</th>
+<th>Usado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mysql_db</td>
+<td>MySQL 8.0</td>
+<td>3308</td>
+<td>Servicio catalogo</td>
+</tr>
+<tr>
+<td>postgres_db</td>
+<td>PostgreSQL 14</td>
+<td>5432</td>
+<td>Servicio Odoo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aplicaciones-cliente">Aplicaciones Cliente</h3>
+<table>
+<thead>
+<tr>
+<th>Aplicación</th>
+<th>Tecnología</th>
+<th>Propósito</th>
+<th>Repositorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Admin Frontend</td>
+<td>Vue.js</td>
+<td>Interfaz de gestión de contenido</td>
+<td>Justflix_Admin</td>
+</tr>
+<tr>
+<td>Reproductor</td>
+<td>Flutter</td>
+<td>Aplicación de streaming para usuarios finales</td>
+<td>Justflix_Reproductor</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flujos-generales">Flujos Generales</h2>
+<h3 id="administrador">Administrador</h3>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="382px" preserveAspectRatio="xMidYMid meet" style="width:642px;height:382px;background:#FFFFFF;" version="1.1" viewBox="0 0 642 382" width="642px" zoomAndPan="magnify" class="diagram"><defs/><g><g class="participant-lifeline" data-entity-uid="part1" data-qualified-name="admin" id="part1-lifeline"><g><title>Admin Frontend</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="64.2119" y="36.2969"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="68" x2="68" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-lifeline"><g><title>Multimedia</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="439.3516" y="36.2969"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="442.438" x2="442.438" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-lifeline"><g><title>Catalogo</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="533.4302" y="36.2969"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="537.2651" x2="537.2651" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part4" data-qualified-name="odoo" id="part4-lifeline"><g><title>Odoo</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="607.1138" y="36.2969"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="610.5952" x2="610.5952" y1="36.2969" y2="347.625"/></g></g><g class="participant participant-head" data-entity-uid="part1" data-qualified-name="admin" id="part1-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126.4238" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.4238" x="12" y="24.9951">Admin Frontend</text></g><g class="participant participant-tail" data-entity-uid="part1" data-qualified-name="admin" id="part1-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="126.4238" x="5" y="346.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.4238" x="12" y="366.6201">Admin Frontend</text></g><g class="participant participant-head" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="91.8271" x="397.438" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.8271" x="404.438" y="24.9951">Multimedia</text></g><g class="participant participant-tail" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="91.8271" x="397.438" y="346.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.8271" x="404.438" y="366.6201">Multimedia</text></g><g class="participant participant-head" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76.3301" x="499.2651" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.3301" x="506.2651" y="24.9951">Catalogo</text></g><g class="participant participant-tail" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76.3301" x="499.2651" y="346.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.3301" x="506.2651" y="366.6201">Catalogo</text></g><g class="participant participant-head" data-entity-uid="part4" data-qualified-name="odoo" id="part4-head"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51.0371" x="585.5952" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.0371" x="592.5952" y="24.9951">Odoo</text></g><g class="participant participant-tail" data-entity-uid="part4" data-qualified-name="odoo" id="part4-tail"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51.0371" x="585.5952" y="346.625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.0371" x="592.5952" y="366.6201">Odoo</text></g><g class="message" data-entity-1="part1" data-entity-2="part4" id="msg1"><polygon fill="#181818" points="599.1138,63.4297,609.1138,67.4297,599.1138,71.4297,603.1138,67.4297" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="68.2119" x2="605.1138" y1="67.4297" y2="67.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223.1011" x="75.2119" y="62.3638">Petición de login /api/authenticate</text></g><g class="message" data-entity-1="part4" data-entity-2="part1" id="msg2"><polygon fill="#181818" points="79.2119,92.5625,69.2119,96.5625,79.2119,100.5625,75.2119,96.5625" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="610.1138" y1="96.5625" y2="96.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="258.0449" x="85.2119" y="91.4966">Devuelve access_token y refresh_token</text></g><g class="message" data-entity-1="part1" data-entity-2="part2" id="msg3"><polygon fill="#181818" points="431.3516,121.6953,441.3516,125.6953,431.3516,129.6953,435.3516,125.6953" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="68.2119" x2="437.3516" y1="125.6953" y2="125.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="304.8335" x="75.2119" y="120.6294">Envia imagen de la serie a /api/serielist/upload</text></g><g class="message" data-entity-1="part2" data-entity-2="part1" id="msg4"><polygon fill="#181818" points="79.2119,150.8281,69.2119,154.8281,79.2119,158.8281,75.2119,154.8281" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="442.3516" y1="154.8281" y2="154.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164.8994" x="85.2119" y="149.7622">Devuelve la id de la serie</text></g><g class="message" data-entity-1="part1" data-entity-2="part3" id="msg5"><polygon fill="#181818" points="525.4302,179.9609,535.4302,183.9609,525.4302,187.9609,529.4302,183.9609" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="68.2119" x2="531.4302" y1="183.9609" y2="183.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="393.5103" x="75.2119" y="178.895">Envia la id_serie + informacion de la serie a /catalogo/series</text></g><g class="message" data-entity-1="part3" data-entity-2="part1" id="msg6"><polygon fill="#181818" points="79.2119,209.0938,69.2119,213.0938,79.2119,217.0938,75.2119,213.0938" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="536.4302" y1="213.0938" y2="213.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193.9336" x="85.2119" y="208.0278">Devuelve el objeto de la serie</text></g><g class="message" data-entity-1="part1" data-entity-2="part2" id="msg7"><polygon fill="#181818" points="431.3516,238.2266,441.3516,242.2266,431.3516,246.2266,435.3516,242.2266" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="68.2119" x2="437.3516" y1="242.2266" y2="242.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223.4438" x="75.2119" y="237.1606">Envia video a /api/videolist/upload</text></g><g class="message" data-entity-1="part2" data-entity-2="part1" id="msg8"><polygon fill="#181818" points="79.2119,267.3594,69.2119,271.3594,79.2119,275.3594,75.2119,271.3594" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="442.3516" y1="271.3594" y2="271.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="351.1396" x="85.2119" y="266.2935">Devuelve video_id y metadatos (duracion, resolucion)</text></g><g class="message" data-entity-1="part1" data-entity-2="part3" id="msg9"><polygon fill="#181818" points="525.4302,296.4922,535.4302,300.4922,525.4302,304.4922,529.4302,300.4922" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="68.2119" x2="531.4302" y1="300.4922" y2="300.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="295.9023" x="75.2119" y="295.4263">Envia video_id y metadatos a /catalogo/video</text></g><g class="message" data-entity-1="part3" data-entity-2="part1" id="msg10"><polygon fill="#181818" points="79.2119,325.625,69.2119,329.625,79.2119,333.625,75.2119,329.625" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="536.4302" y1="329.625" y2="329.625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.6182" x="85.2119" y="324.5591">Devuelve el objeto del video</text></g><?plantuml-src bL59JWCn4Bpd5Gqd42I-HmW9iLmGWXz47RkJQU9bPBS7vLqyWO_XUB9Cn2AukQQhQ-avOQzjDWIDI9kcIaLyconPcZpFYQ8ENiZBH0UdddZL8Dl7Y1r9KcvbWawpDZkh72QXgAGXHqaPMc2seYml6vbi2ADHYr5OSujUuFJ6EFRm4AkuEGLCW9jFnwodei6E36Dbk3qyfjsYe0tBK4bw2uufpoRqur0Uer7rWl5rXLDueGtpuzr3EKDPBZE5BIlCfOylCnJQxboDnzkbE-eosOu0jQQKPX9Mv64DaHQHKjFZWTKX_HJkVSS8x719lIT2EJKNhTwu0ij9L6vjG3Cm7yhi8vHzDaEXW-tk7ZlJIftrRXV0VX6YGytXIuxTOXyc3I8S9FS1o4AOlvA4en2_bU_OKDZrhU0VVIj_LYglmP6WGGa9paoEjSbb-GSfsBnvd_zyYMz5XiKhuU-zRQ_u2G00?></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="382px" preserveAspectRatio="xMidYMid meet" style="width:642px;height:382px;background:#1B1B1B;" version="1.1" viewBox="0 0 642 382" width="642px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="#1B1B1B" height="382" style="stroke:none;stroke-width:1;" width="642" x="0" y="0"/><g class="participant-lifeline" data-entity-uid="part1" data-qualified-name="admin" id="part1-lifeline"><g><title>Admin Frontend</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="64.2119" y="36.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="68" x2="68" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-lifeline"><g><title>Multimedia</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="439.3516" y="36.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="442.438" x2="442.438" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-lifeline"><g><title>Catalogo</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="533.4302" y="36.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="537.2651" x2="537.2651" y1="36.2969" y2="347.625"/></g></g><g class="participant-lifeline" data-entity-uid="part4" data-qualified-name="odoo" id="part4-lifeline"><g><title>Odoo</title><rect fill="#000000" fill-opacity="0.00000" height="311.3281" width="8" x="607.1138" y="36.2969"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="610.5952" x2="610.5952" y1="36.2969" y2="347.625"/></g></g><g class="participant participant-head" data-entity-uid="part1" data-qualified-name="admin" id="part1-head"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="126.4238" x="5" y="5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.4238" x="12" y="24.9951">Admin Frontend</text></g><g class="participant participant-tail" data-entity-uid="part1" data-qualified-name="admin" id="part1-tail"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="126.4238" x="5" y="346.625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112.4238" x="12" y="366.6201">Admin Frontend</text></g><g class="participant participant-head" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-head"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="91.8271" x="397.438" y="5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.8271" x="404.438" y="24.9951">Multimedia</text></g><g class="participant participant-tail" data-entity-uid="part2" data-qualified-name="multimedia" id="part2-tail"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="91.8271" x="397.438" y="346.625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.8271" x="404.438" y="366.6201">Multimedia</text></g><g class="participant participant-head" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-head"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="76.3301" x="499.2651" y="5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.3301" x="506.2651" y="24.9951">Catalogo</text></g><g class="participant participant-tail" data-entity-uid="part3" data-qualified-name="catalogo" id="part3-tail"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="76.3301" x="499.2651" y="346.625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.3301" x="506.2651" y="366.6201">Catalogo</text></g><g class="participant participant-head" data-entity-uid="part4" data-qualified-name="odoo" id="part4-head"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="51.0371" x="585.5952" y="5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.0371" x="592.5952" y="24.9951">Odoo</text></g><g class="participant participant-tail" data-entity-uid="part4" data-qualified-name="odoo" id="part4-tail"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="51.0371" x="585.5952" y="346.625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.0371" x="592.5952" y="366.6201">Odoo</text></g><g class="message" data-entity-1="part1" data-entity-2="part4" id="msg1"><polygon fill="#E7E7E7" points="599.1138,63.4297,609.1138,67.4297,599.1138,71.4297,603.1138,67.4297" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.2119" x2="605.1138" y1="67.4297" y2="67.4297"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223.1011" x="75.2119" y="62.3638">Petición de login /api/authenticate</text></g><g class="message" data-entity-1="part4" data-entity-2="part1" id="msg2"><polygon fill="#E7E7E7" points="79.2119,92.5625,69.2119,96.5625,79.2119,100.5625,75.2119,96.5625" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="610.1138" y1="96.5625" y2="96.5625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="258.0449" x="85.2119" y="91.4966">Devuelve access_token y refresh_token</text></g><g class="message" data-entity-1="part1" data-entity-2="part2" id="msg3"><polygon fill="#E7E7E7" points="431.3516,121.6953,441.3516,125.6953,431.3516,129.6953,435.3516,125.6953" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.2119" x2="437.3516" y1="125.6953" y2="125.6953"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="304.8335" x="75.2119" y="120.6294">Envia imagen de la serie a /api/serielist/upload</text></g><g class="message" data-entity-1="part2" data-entity-2="part1" id="msg4"><polygon fill="#E7E7E7" points="79.2119,150.8281,69.2119,154.8281,79.2119,158.8281,75.2119,154.8281" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="442.3516" y1="154.8281" y2="154.8281"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164.8994" x="85.2119" y="149.7622">Devuelve la id de la serie</text></g><g class="message" data-entity-1="part1" data-entity-2="part3" id="msg5"><polygon fill="#E7E7E7" points="525.4302,179.9609,535.4302,183.9609,525.4302,187.9609,529.4302,183.9609" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.2119" x2="531.4302" y1="183.9609" y2="183.9609"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="393.5103" x="75.2119" y="178.895">Envia la id_serie + informacion de la serie a /catalogo/series</text></g><g class="message" data-entity-1="part3" data-entity-2="part1" id="msg6"><polygon fill="#E7E7E7" points="79.2119,209.0938,69.2119,213.0938,79.2119,217.0938,75.2119,213.0938" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="536.4302" y1="213.0938" y2="213.0938"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193.9336" x="85.2119" y="208.0278">Devuelve el objeto de la serie</text></g><g class="message" data-entity-1="part1" data-entity-2="part2" id="msg7"><polygon fill="#E7E7E7" points="431.3516,238.2266,441.3516,242.2266,431.3516,246.2266,435.3516,242.2266" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.2119" x2="437.3516" y1="242.2266" y2="242.2266"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223.4438" x="75.2119" y="237.1606">Envia video a /api/videolist/upload</text></g><g class="message" data-entity-1="part2" data-entity-2="part1" id="msg8"><polygon fill="#E7E7E7" points="79.2119,267.3594,69.2119,271.3594,79.2119,275.3594,75.2119,271.3594" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="442.3516" y1="271.3594" y2="271.3594"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="351.1396" x="85.2119" y="266.2935">Devuelve video_id y metadatos (duracion, resolucion)</text></g><g class="message" data-entity-1="part1" data-entity-2="part3" id="msg9"><polygon fill="#E7E7E7" points="525.4302,296.4922,535.4302,300.4922,525.4302,304.4922,529.4302,300.4922" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.2119" x2="531.4302" y1="300.4922" y2="300.4922"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="295.9023" x="75.2119" y="295.4263">Envia video_id y metadatos a /catalogo/video</text></g><g class="message" data-entity-1="part3" data-entity-2="part1" id="msg10"><polygon fill="#E7E7E7" points="79.2119,325.625,69.2119,329.625,79.2119,333.625,75.2119,329.625" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;stroke-dasharray:2,2;" x1="73.2119" x2="536.4302" y1="329.625" y2="329.625"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.6182" x="85.2119" y="324.5591">Devuelve el objeto del video</text></g><?plantuml-src bL59JWCn4Bpd5Gqd42I-HmW9iLmGWXz47RkJQU9bPBS7vLqyWO_XUB9Cn2AukQQhQ-avOQzjDWIDI9kcIaLyconPcZpFYQ8ENiZBH0UdddZL8Dl7Y1r9KcvbWawpDZkh72QXgAGXHqaPMc2seWp6rMGp7urQZCAQM_G2fpV6iOU7MBNDAM02t7mwPZqL2NPa62l3xU4nxHO5RLY6Ij9RS4nvDg4VX_8OZQeNZAyhdC8BRPWVxnxA5SfocIbiMM4kTNoPeT1svseytYxTKPV9TWIeDQKqax0Y3sk8j8YKcXuFh0xfft3lEqPWXqlgFH7AfRbezSOLM4wYSci3ce7vK6OVeUop6GeTR7Vts9bMwgntkm3sYn0TQWvVSkmM-p1f4E4WkGz05iBybIGSXVYjVCU6mgvl1V_eM_cpKdaDZWGDIaXmPdAiJIxBFqZ1vitx_ETBV2ioB5u9V-zjUyLF?></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
