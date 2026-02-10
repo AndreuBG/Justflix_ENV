@@ -1,7 +1,7 @@
 # Inicio
 
-## Propósito
-El propósito de la aplicación es crear una plataforma de streaming que gestione usuarios, suscriptores y administradores, proporcionando un catálogo completo de series y vídeos de alta calidad.
+## Proposito
+El proposito de la aplicacion es crear una plataforma de streaming, que gestione usuarios, suscriptores y administradores. Que proporcionará un listado de series y videos.
 
 ## Componentes del Sistema
 La plataforma Justflix consiste en los siguientes **componentes principales**, todos orquestados por Justflix_ENV:
@@ -29,46 +29,119 @@ La plataforma Justflix consiste en los siguientes **componentes principales**, t
 | Admin Frontend     | Vue.js    | Interfaz de gestión de contenido       | Justflix_Admin      |
 | Reproductor        | Flutter   | Aplicación de streaming para usuarios finales | Justflix_Reproductor |
 
-## Flujos del Sistema
+## Flujos Generales
 
-Para que la monitorización de subidas sea fluida, el administrador cuenta con una interfaz que informa en tiempo real del estado de los archivos mediante **WebSockets**.
+### Administrador
 
 ```puml
 @startuml
-skinparam actorStyle awesome
-autonumber
 
-actor "Administrador" as admin
-participant "Admin Frontend\n(Vue.js)" as vue
-participant "Servicio Multimedia\n(Node.js)" as media
-participant "Catálogo\n(Spring Boot)" as cat
+actor "Usuario" as user
 
-== Autenticación y JWT ==
-admin -> vue: Inicia sesión
-vue -> cat: Valida credenciales
-cat -> vue: Devuelve JWT Token
+participant "Admin Frontend" as admin
+participant "Multimedia" as multimedia
+participant "Catalogo" as catalogo
+participant "Odoo" as odoo
 
-== Subida de Contenido ==
-admin -> vue: Selecciona Video (.mp4)
-vue -> media: POST /api/videolist/upload (Stream)
+user -> admin : Acceder al login
 
-note right of vue
-  Se establece conexión WS para
-  monitorizar la transcodificación
-end note
+admin -> odoo: Petición de login /api/authenticate
+admin <-- odoo: Devuelve access_token y refresh_token
 
-vue <-> media: Conexión WebSocket establecida
+user <-- admin : Muestra la pagina de inicio
 
-group Feedback en tiempo real (WS)
-    media -> vue: Progreso: 25% (Procesando)
-    media -> vue: Progreso: 75% (Transcodificando)
-    media -> vue: Evento: "status_complete" (video_id)
+user -> admin : Crear una serie
+admin -> multimedia: Envia imagen de la serie a /api/serielist/upload
+admin <-- multimedia: Devuelve la id de la serie
+admin -> catalogo: Envia la id_serie + informacion de la serie a /catalogo/series
+admin <-- catalogo: Devuelve el objeto de la serie
+
+user <-- admin : Muestra la pagina de la serie
+
+user -> admin : Crear un video en la serie
+admin -> multimedia: Envia video a /api/videolist/upload
+admin <-- multimedia: Devuelve video_id y metadatos (duracion, resolucion)
+admin -> catalogo: Envia video_id y metadatos a /catalogo/video
+admin <-- catalogo: Devuelve el objeto del video
+
+user <-- admin : Muestra el progreso y actualiza la lista de episodios
+
+@enduml
+```
+
+### Suscriptor
+
+```puml
+@startuml
+
+actor "Usuario" as user
+participant "Reproductor" as reproductor
+participant "Multimedia" as multimedia
+participant "Catalogo" as catalogo
+participant "Odoo" as odoo
+
+
+
+user -> reproductor : Acceder al login
+
+reproductor -> odoo: Petición de login /api/authenticate
+reproductor <-- odoo: Devuelve access_token y refresh_token
+
+reproductor -> catalogo: Peticion de los videos simples /catalogo/videos
+reproductor <-- catalogo: Devuelve una pagina con la info de los videos
+
+reproductor -> catalogo: Peticion de las series simples /catalogo/series
+reproductor <-- catalogo: Devuelve una pagina con la info de las series
+
+loop Por cada video
+
+reproductor -> multimedia: Pide los thumbnails /public/thumbnail/:id_video.png
+reproductor <-- multimedia: Devuelve la imagen
+
 end
 
-vue -> cat: POST /catalogo/video (video_id + metadatos)
-cat -> cat: Persistencia en MySQL
-cat -> vue: Confirmación de publicación
+loop Por cada serie
 
-vue -> admin: Notificación: "Vídeo disponible"
+reproductor -> multimedia: Pide los thumbnails /public/thumb_series/:id_serie.png
+reproductor <-- multimedia: Devuelve la imagen
+
+end
+
+user <-- reproductor : Muestra la pagina de inicio
+
+user -> reproductor : Selecciona video
+reproductor -> catalogo : Pide la info del video /catalogo/videos/:id_video
+reproductor <-- catalogo : Devuelve el video al completo
+
+reproductor -> catalogo : Pide la info de la serie /catalogo/series/:id_serie
+reproductor <-- catalogo : Devuelve la serie
+
+user <-- reproductor : Muestra la info del video
+
+user -> reproductor : Reproducir video
+
+reproductor -> multimedia : Pide el listado de fragmentos /api/videolist/:id_video/index.m3u8
+multimedia -> multimedia: Verificar que el token no esta expirado o vaya a expirar
+multimedia -> multimedia: Verificar token con la clave publica
+reproductor <-- multimedia : Devuelve el listado
+
+loop Por cada segmento .ts
+
+reproductor -> multimedia : Pide el fragmento /api/videolist/:id_video/indexN.ts
+multimedia -> multimedia: Verificar que el token no esta expirado o vaya a expirar
+multimedia -> multimedia: Verificar token con la clave publica
+reproductor <-- multimedia : Devuelve el fragmento
+user <-- reproductor: Mostrar fragmento del video
+
+end
+
+
+
+
+
+
+
+
+
 @enduml
 ```

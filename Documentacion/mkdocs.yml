@@ -2,6 +2,7 @@ site_name: Documentacion de Justflix
 theme:
   name: material
 nav:
+  - Inicio: index.md
   - Justflix_ENV: env.md
   - Catalogo: catalogo.md
   - Suscripciones: suscripciones.md
