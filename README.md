@@ -26,8 +26,11 @@ Configuración centralizada de Docker Compose para ejecutar todos los servicios 
    sudo apt install mkcert
    ```
 
-2. **Clona todos los repositorios necesarios :**  
-   **IMPORTANTE: Ejecutar el script desde Justflix_ENV**
+2. **Clona todos los repositorios necesarios :**
+
+> [!IMPORTANT]  
+> Ejecutar el script desde Justflix_ENV
+
    ```bash
    ./scripts/install.sh
    ```
@@ -41,14 +44,17 @@ Configuración centralizada de Docker Compose para ejecutar todos los servicios 
    ```bash
    cd ../Justflix_Multimedia
    npm install
-   npm run dev
+   npm run build
+   npm start
    ```
 
 5. **Inicia Odoo:**
 Accede a `https://localhost` y utiliza la ultima copia de seguridad de Odoo para iniciar sesión.
 
-Usuario administrador por defecto -> admin
-Contraseña -> admin
+> [!NOTE]  
+> Correo : admin@gmail.com
+> Contraseña : admin
+> Cambiar info al iniciar sesión
 
 6.1 **Iniciar reproductor (Flutter):**
    ```bash
@@ -63,6 +69,10 @@ Contraseña -> admin
    npm install
    npm run dev
    ```
+7. **Cambiar contraseñas:**
+
+* Cambiar variables en .env
+* Cambiar odoo.conf en carpeta config para que coincida con las variables de .env
 
 
 ## URLs de Acceso
@@ -113,11 +123,8 @@ Justflix_ENV/
 ├── docker-compose.yml      # Configuración principal
 ├── .env                     # Variables de entorno
 ├── scripts/                 # Scripts auxiliares
-│   ├── init-mysql.sql      # Inicialización de MySQL
 │   ├── generate_certs.sh   # Generar certificados SSL
 │   ├── generate_jwt_keys.sh # Generar claves JWT
 │   ├── install.sh          # Instalación
-│   ├── start.sh            # Iniciar servicios
-│   └── stop.sh             # Detener servicios
 └── README.md               # Este archivo
 ```

@@ -16,7 +16,7 @@ mkdir -p $CATALOG_DIR # Creamos el directorio si no existe
 cp $TARGET_DIR/public_key.pem $CATALOG_DIR/public_key.pem # Copiamos la clave publica al catalogo
 echo "Public key copied to $CATALOG_DIR/public_key.pem"
 
-MEDIA_DIR=../Justflix_Multimedia/jwt-key # Ruta de las claves jwt en multimedia
+MEDIA_DIR=../Justflix_Multimedia/src/jwt-key # Ruta de las claves jwt en multimedia
 
 mkdir -p $MEDIA_DIR # Creamos el directorio si no existe
 cp $TARGET_DIR/public_key.pem $MEDIA_DIR/public_key.pem # Copiamos la clave publica a multimedia
