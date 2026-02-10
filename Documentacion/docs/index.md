@@ -1,7 +1,7 @@
 # Inicio
 
-## Proposito
-El proposito de la aplicacion es crear una plataforma de streaming, que gestione usuarios, suscriptores y administradores. Que proporcionará un listado de series y videos.
+## Propósito
+El propósito de la aplicación es crear una plataforma de streaming que gestione usuarios, suscriptores y administradores, proporcionando un catálogo completo de series y vídeos de alta calidad.
 
 ## Componentes del Sistema
 La plataforma Justflix consiste en los siguientes **componentes principales**, todos orquestados por Justflix_ENV:
@@ -29,33 +29,46 @@ La plataforma Justflix consiste en los siguientes **componentes principales**, t
 | Admin Frontend     | Vue.js    | Interfaz de gestión de contenido       | Justflix_Admin      |
 | Reproductor        | Flutter   | Aplicación de streaming para usuarios finales | Justflix_Reproductor |
 
-## Flujos Generales
+## Flujos del Sistema
 
-### Administrador
+Para que la monitorización de subidas sea fluida, el administrador cuenta con una interfaz que informa en tiempo real del estado de los archivos mediante **WebSockets**.
 
 ```puml
 @startuml
+skinparam actorStyle awesome
+autonumber
 
-participant "Admin Frontend" as admin
-participant "Multimedia" as multimedia
-participant "Catalogo" as catalogo
-participant "Odoo" as odoo
+actor "Administrador" as admin
+participant "Admin Frontend\n(Vue.js)" as vue
+participant "Servicio Multimedia\n(Node.js)" as media
+participant "Catálogo\n(Spring Boot)" as cat
 
-admin -> odoo: Petición de login /api/authenticate
-admin <-- odoo: Devuelve access_token y refresh_token
+== Autenticación y JWT ==
+admin -> vue: Inicia sesión
+vue -> cat: Valida credenciales
+cat -> vue: Devuelve JWT Token
 
-admin -> multimedia: Envia imagen de la serie a /api/serielist/upload
-admin <-- multimedia: Devuelve la id de la serie
-admin -> catalogo: Envia la id_serie + informacion de la serie a /catalogo/series
-admin <-- catalogo: Devuelve el objeto de la serie
+== Subida de Contenido ==
+admin -> vue: Selecciona Video (.mp4)
+vue -> media: POST /api/videolist/upload (Stream)
 
-admin -> multimedia: Envia video a /api/videolist/upload
-admin <-- multimedia: Devuelve video_id y metadatos (duracion, resolucion)
-admin -> catalogo: Envia video_id y metadatos a /catalogo/video
-admin <-- catalogo: Devuelve el objeto del video
+note right of vue
+  Se establece conexión WS para
+  monitorizar la transcodificación
+end note
 
+vue <-> media: Conexión WebSocket establecida
 
+group Feedback en tiempo real (WS)
+    media -> vue: Progreso: 25% (Procesando)
+    media -> vue: Progreso: 75% (Transcodificando)
+    media -> vue: Evento: "status_complete" (video_id)
+end
 
+vue -> cat: POST /catalogo/video (video_id + metadatos)
+cat -> cat: Persistencia en MySQL
+cat -> vue: Confirmación de publicación
 
+vue -> admin: Notificación: "Vídeo disponible"
 @enduml
 ```

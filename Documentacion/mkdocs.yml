@@ -5,6 +5,8 @@ nav:
   - Justflix_ENV: env.md
   - Catalogo: catalogo.md
   - Suscripciones: suscripciones.md
+  - Multimedia: multimedia.md
+  - Reproductor: reproductor.md
 plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
