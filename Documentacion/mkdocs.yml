@@ -8,6 +8,8 @@ nav:
   - Suscripciones: suscripciones.md
   - Multimedia: multimedia.md
   - Reproductor: reproductor.md
+  - Admin: admin_front.md
+  - Videos: videos_sostenibilidad.md
 plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
