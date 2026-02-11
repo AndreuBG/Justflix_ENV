@@ -1,0 +1,866 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../reproductor/">
+      
+      
+        <link rel="next" href="../videos_sostenibilidad/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Admin - Documentacion de Justflix</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capacidades-principales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentacion de Justflix" class="md-header__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentacion de Justflix
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Admin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentacion de Justflix" class="md-nav__button md-logo" aria-label="Documentacion de Justflix" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentacion de Justflix
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justflix_ENV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suscripciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suscripciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multimedia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multimedia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproductor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproductor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../videos_sostenibilidad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capacidades-principales">CAPACIDADES PRINCIPALES</h1>
+<ul>
+<li>
+<p><strong>Autenticación JWT con validación de roles</strong>: Acceso exclusivo para usuarios con rol 'admin'<br />
+  Componentes: LoginForm, validación de token JWT</p>
+</li>
+<li>
+<p><strong>Gestión de series</strong>: Creación, edición y eliminación de series del catálogo<br />
+  Componentes: Home, SeriesManager</p>
+</li>
+<li>
+<p><strong>Gestión de episodios</strong>: CRUD completo de episodios asociados a series<br />
+  Componentes: SerieDetail, VideoEditor</p>
+</li>
+<li>
+<p><strong>Subida de contenido multimedia</strong>: Upload de videos con conversión HLS automática y generación de miniaturas<br />
+  Componentes: UploadForm, integración con servidor multimedia</p>
+</li>
+<li>
+<p><strong>Eliminación completa de videos</strong>: Eliminación dual (catálogo + archivos físicos del servidor multimedia)<br />
+  Componentes: SerieDetail, VideoEditor</p>
+</li>
+<li>
+<p><strong>Gestión de miniaturas</strong>: Upload y gestión de imágenes para series<br />
+  Componentes: UploadForm, integración con API multimedia</p>
+</li>
+<li>
+<p><strong>Interfaz responsive</strong>: Navegación mediante sidebar con rutas dinámicas<br />
+  Componentes: Sidebar, App</p>
+</li>
+<li>
+<p><strong>Comunicación multi-backend</strong>: Integración con Odoo (auth), Spring Boot (catálogo) y Node.js (multimedia)<br />
+  Configuración: Vite proxy con manejo de CORS y certificados autofirmados</p>
+</li>
+</ul>
+<h1 id="estructura-del-proyecto">ESTRUCTURA DEL PROYECTO</h1>
+<pre><code class="language-ruby">admin_app/
+├── index.html                    # Punto de entrada HTML
+├── package.json                  # Dependencias del proyecto
+├── vite.config.js                # Configuración de Vite con proxies
+├── login.js                      # Lógica de autenticación (no utilizado en Vue)
+├── mock-server.js                # Servidor mock para desarrollo
+└── src/
+    ├── main.js                   # Inicialización de Vue 3
+    ├── App.vue                   # Componente raíz con router manual y sidebar
+    └── components/
+        ├── LoginForm.vue         # Formulario de login con validación de roles
+        ├── Home.vue              # Dashboard principal con gestión de series
+        ├── Media.vue             # Vista de gestión multimedia (legacy)
+        ├── SerieDetail.vue       # Detalle de serie con listado de episodios
+        ├── VideoEditor.vue       # Modal de edición de episodios
+        ├── UploadForm.vue        # Formulario de subida de contenido
+        └── Sidebar.vue           # Navegación lateral
+</code></pre>
+<h1 id="arquitectura">ARQUITECTURA</h1>
+<p>La aplicación sigue una <strong>arquitectura de componentes Vue 3</strong> con Composition API:</p>
+<ul>
+<li><strong>Capa de presentación</strong>: Componentes Vue con lógica reactiva (<code>ref</code>, <code>reactive</code>, <code>computed</code>)</li>
+<li><strong>Capa de servicios</strong>: Funciones auxiliares para peticiones HTTP autenticadas</li>
+<li><strong>Integración multi-backend</strong>: Comunicación con 3 servicios independientes (Odoo, Spring Boot, Node.js)</li>
+<li><strong>Router manual</strong>: Navegación implementada mediante estado reactivo sin Vue Router</li>
+</ul>
+<hr />
+<h2 id="flujo-de-autenticacion">Flujo de autenticación</h2>
+<ol>
+<li>Usuario introduce email y contraseña en <code>LoginForm</code></li>
+<li>POST a <code>/api/login</code> (Odoo) con credenciales</li>
+<li>Odoo responde con JWT que incluye:</li>
+<li><code>sub</code>: ID del usuario</li>
+<li><code>username</code>: Nombre de usuario</li>
+<li><code>roles</code>: Array con roles ['admin'] o ['user']</li>
+<li><code>has_subscription</code>: Boolean de suscripción activa</li>
+<li><code>exp</code>: Timestamp de expiración</li>
+<li><code>LoginForm</code> decodifica el JWT y valida que <code>roles</code> incluya 'admin'</li>
+<li>Si es válido, emite evento <code>login-success</code> con el token</li>
+<li><code>App.vue</code> almacena el token y muestra la interfaz de administración</li>
+</ol>
+<hr />
+<h2 id="sistema-de-navegacion">Sistema de navegación</h2>
+<ul>
+<li><strong>Estado reactivo</strong>: <code>currentView</code> determina qué componente renderizar</li>
+<li><strong>Sidebar</strong>: Botones que cambian <code>currentView</code> mediante eventos</li>
+<li><strong>Rutas disponibles</strong>:</li>
+<li><code>home</code>: Dashboard principal con gestión de series</li>
+<li><code>upload</code>: Formulario de subida de contenido</li>
+<li><code>serie-detail</code>: Detalle de serie con episodios (recibe <code>serieId</code>)</li>
+</ul>
+<hr />
+<h2 id="gestion-de-estado">Gestión de estado</h2>
+<ul>
+<li><strong>Token JWT</strong>: Almacenado en <code>App.vue</code> y propagado via props</li>
+<li><strong>Series</strong>: Estado local en <code>Home.vue</code> con <code>ref&lt;Array&gt;</code></li>
+<li><strong>Episodios</strong>: Estado local en <code>SerieDetail.vue</code> con reactividad</li>
+<li><strong>Modales</strong>: Estado booleano para controlar visibilidad de <code>VideoEditor</code></li>
+</ul>
+<h1 id="componentes">COMPONENTES</h1>
+<h2 id="loginformvue">LoginForm.vue</h2>
+<p><strong>Propósito</strong>: Autenticación con validación de rol de administrador</p>
+<p><strong>Características</strong>:
+- Formulario reactivo con email y contraseña
+- Validación de rol 'admin' mediante decodificación de JWT
+- Mensajes de error específicos (credenciales inválidas, acceso denegado)
+- Emisión de evento <code>login-success</code> con token válido</p>
+<p><strong>Flujo</strong>:
+1. Usuario completa formulario y hace submit
+2. POST a <code>/api/login</code> con <code>{ login, password }</code>
+3. Si 200: decodifica token con <code>atob(tokenParts[1])</code>
+4. Valida que <code>payload.roles.includes('admin')</code>
+5. Si no es admin: lanza error "Acceso denegado: Solo administradores..."
+6. Si es admin: emite <code>login-success(token)</code></p>
+<h2 id="appvue">App.vue</h2>
+<p><strong>Propósito</strong>: Componente raíz que gestiona autenticación y navegación</p>
+<p><strong>Características</strong>:
+- Estado global de autenticación (<code>isLoggedIn</code>, <code>token</code>)
+- Router manual mediante <code>currentView</code>
+- Props drilling para pasar token y callbacks de navegación
+- Renderizado condicional (LoginForm vs Dashboard)</p>
+<p><strong>Métodos clave</strong>:
+- <code>handleLogin(token)</code>: Almacena token y activa sesión
+- <code>handleLogout()</code>: Limpia token y retorna a login
+- <code>goToUpload()</code>: Navega a formulario de subida
+- <code>goToSerieDetail(serieId)</code>: Navega a detalle de serie
+- <code>goHome()</code>: Retorna al dashboard principal</p>
+<hr />
+<h2 id="homevue">Home.vue</h2>
+<p><strong>Propósito</strong>: Dashboard principal con gestión de series</p>
+<p><strong>Características</strong>:
+- Listado de todas las series del catálogo
+- Creación de nuevas series mediante formulario inline
+- Navegación a detalle de serie
+- Botón para acceder a formulario de subida de contenido
+- Actualización automática tras crear serie</p>
+<p><strong>Funciones principales</strong>:
+- <code>fetchSeries()</code>: GET a <code>/catalogo/series</code> (paginado)
+- <code>createSerie()</code>: POST a <code>/catalogo/series</code> con título y descripción
+- <code>goToSerieDetail(id)</code>: Emite evento de navegación</p>
+<p><strong>Estado</strong>:
+- <code>series</code>: Array de series del catálogo
+- <code>newTitle</code>, <code>newDesc</code>: Campos del formulario de creación</p>
+<hr />
+<h2 id="seriedetailvue">SerieDetail.vue</h2>
+<p><strong>Propósito</strong>: Vista detallada de serie con gestión de episodios</p>
+<p><strong>Características</strong>:
+- Información de la serie (título, descripción)
+- Listado de episodios asociados a la serie
+- Edición de episodios mediante modal <code>VideoEditor</code>
+- <strong>Eliminación dual</strong>: catálogo + archivos multimedia
+- Actualización automática tras operaciones CRUD</p>
+<p><strong>Funciones principales</strong>:
+- <code>fetchSerie(id)</code>: GET a <code>/catalogo/series/${id}</code>
+- <code>fetchEpisodes(id)</code>: GET a <code>/catalogo/videos/series/${id}/episodios</code>
+- <code>remove(video)</code>: <strong>Eliminación dual</strong>
+  1. DELETE a <code>/catalogo/videos/${video.id}</code> (elimina entrada en BD)
+  2. DELETE a <code>/multimedia/api/videolist/delete/${video.id}</code> (elimina archivos físicos)
+- <code>openEditor(video)</code>: Abre modal de edición
+- <code>closeEditor()</code>: Cierra modal y refresca episodios</p>
+<hr />
+<h2 id="videoeditorvue">VideoEditor.vue</h2>
+<p><strong>Propósito</strong>: Modal de edición de metadatos de episodios</p>
+<p><strong>Características</strong>:
+- Formulario reactivo con campos: título, descripción, número de temporada, número de episodio
+- Guardar cambios mediante PATCH
+- <strong>Eliminación dual</strong> desde el modal
+- Cierre automático tras operaciones exitosas</p>
+<p><strong>Funciones principales</strong>:
+- <code>onSave()</code>: PATCH a <code>/catalogo/videos/${video.id}</code> con campos actualizados
+- <code>onDelete()</code>: <strong>Eliminación dual</strong> (mismo patrón que <code>SerieDetail.remove()</code>)
+- <code>onClose()</code>: Emite evento para cerrar modal</p>
+<p><strong>Validaciones</strong>:
+- Todos los campos son requeridos
+- Número de temporada y episodio deben ser enteros positivos</p>
+<hr />
+<h2 id="uploadformvue">UploadForm.vue</h2>
+<p><strong>Propósito</strong>: Formulario de subida de contenido multimedia</p>
+<p><strong>Características</strong>:
+- Upload de videos con conversión HLS automática
+- Upload de miniaturas para series
+- Asociación de videos a series existentes
+- Progreso en tiempo real mediante WebSocket
+- Validación de archivos y campos</p>
+<p><strong>Funciones principales</strong>:
+- <code>uploadVideo()</code>: POST multipart/form-data a <code>/multimedia/api/videolist/upload</code>
+  - Incluye: archivo de video, título, descripción, temporada, episodio, serieId
+  - Respuesta: <code>{ videoId, websocketUrl, duration, resolution }</code>
+  - Conecta WebSocket para recibir progreso (metadata → thumbnail → processing → complete)
+- <code>uploadThumb()</code>: POST multipart/form-data a <code>/multimedia/api/serielist/upload</code>
+  - Incluye: archivo PNG
+  - Respuesta: <code>{ idThumb }</code>
+  - Actualiza serie con PATCH a <code>/catalogo/series/${serieId}</code> con nuevo <code>idThumb</code></p>
+<p><strong>WebSocket de progreso</strong>:
+- URL recibida en respuesta de upload: <code>ws://localhost:8080?videoId={id}</code>
+- Mensajes recibidos:
+  - <code>{ stage: 'metadata', progress: 30, duration, resolution }</code>
+  - <code>{ stage: 'thumbnail_complete', progress: 40 }</code>
+  - <code>{ stage: 'processing', progress: 45-95 }</code>
+  - <code>{ stage: 'complete', progress: 100 }</code>
+  - <code>{ stage: 'error', progress: 0, message }</code></p>
+<p><strong>Flujo completo de subida de video</strong>:
+1. Usuario selecciona archivo y completa formulario
+2. POST multipart a endpoint multimedia
+3. Servidor responde con videoId y websocketUrl
+4. Frontend conecta WebSocket para recibir progreso
+5. Servidor procesa video en background (FFmpeg → HLS + thumbnail)
+6. Frontend muestra progreso en tiempo real
+7. Al completar, POST a catálogo para registrar metadatos
+8. Video queda disponible en el catálogo</p>
+<hr />
+<h2 id="sidebarvue">Sidebar.vue</h2>
+<p><strong>Propósito</strong>: Navegación lateral con botones de acción</p>
+<p><strong>Características</strong>:
+- Botón "Inicio": Retorna al dashboard
+- Botón "Subir contenido": Navega a formulario de upload
+- Botón "Cerrar sesión": Limpia token y retorna a login
+- Navegación mediante emisión de eventos</p>
+<h1 id="integracion-de-backends">INTEGRACIÓN DE BACKENDS</h1>
+<p>La aplicación se comunica con <strong>3 servicios backend independientes</strong>:</p>
+<h2 id="1-odoo-autenticacion-y-suscripciones">1. Odoo (Autenticación y Suscripciones)</h2>
+<p><strong>Base URL</strong>: <code>http://localhost:8069</code><br />
+<strong>Proxy en dev</strong>: <code>/api</code> → <code>http://localhost:8069</code></p>
+<p><strong>Características del JWT</strong>:
+- Algoritmo: RS256 (firma asimétrica)
+- Payload decodificable en frontend (base64)
+- Campo <code>roles</code>: Array con ['admin'] o ['user']
+- Validación de firma en backend, validación de roles en frontend</p>
+<h2 id="2-spring-boot-catalogo">2. Spring Boot (Catálogo)</h2>
+<p><strong>Base URL</strong>: <code>https://localhost:8090</code><br />
+<strong>Proxy en dev</strong>: <code>/catalogo</code> → <code>https://localhost:8090</code></p>
+<p><strong>Notas</strong>:
+- Todas las peticiones requieren token JWT en header <code>Authorization: Bearer {token}</code>
+- Paginación estándar Spring Data: <code>?page={n}&amp;size={m}</code></p>
+<hr />
+<h2 id="3-nodejs-multimedia">3. Node.js (Multimedia)</h2>
+<p><strong>Base URL</strong>: <code>http://localhost:8080</code><br />
+<strong>Proxy en dev</strong>: <code>/multimedia</code> → <code>http://localhost:8080</code></p>
+<hr />
+<h2 id="configuracion-de-proxies-viteconfigjs">Configuración de proxies (vite.config.js)</h2>
+<pre><code class="language-javascript">server: {
+  proxy: {
+    '/api': { 
+      target: 'http://localhost:8069', 
+      changeOrigin: true 
+    },
+    '/catalogo': { 
+      target: 'https://localhost:8090', 
+      changeOrigin: true, 
+      secure: true
+    },
+    '/multimedia': { 
+      target: 'http://localhost:8080', 
+      changeOrigin: true, 
+      rewrite: (path) =&gt; path.replace(/^\/multimedia/, '') 
+    }
+  }
+}
+</code></pre>
+<p><strong>Ventajas</strong>:
+- Evita problemas de CORS en desarrollo
+- Permite trabajar con certificados autofirmados (Spring Boot)
+- Mantiene URLs relativas en el código
+- Simplifica configuración de producción (reverse proxy en Nginx)</p>
+<h1 id="funciones-auxiliares">FUNCIONES AUXILIARES</h1>
+<h2 id="authfetch-authget-authpost-authpatch-authdelete">authFetch / authGet / authPost / authPatch / authDelete</h2>
+<p><strong>Propósito</strong>: Abstracciones para peticiones HTTP autenticadas</p>
+<p><strong>Uso</strong>:
+- Todas las funciones reciben el token como último parámetro
+- Se utilizan en todos los componentes que hacen peticiones autenticadas
+- Simplifican la gestión de headers de autorización</p>
+<h1 id="seguridad">SEGURIDAD</h1>
+<h2 id="validacion-de-roles-en-frontend">Validación de roles en frontend</h2>
+<p><strong>Estrategia</strong>: Decodificación y validación de payload JWT sin verificar firma</p>
+<p><strong>Justificación</strong>:
+- La verificación de firma se realiza en el backend
+- Frontend solo necesita leer el contenido para decisiones de UI
+- No es una vulnerabilidad: el backend siempre valida permisos en cada petición</p>
+<h1 id="flujos-de-usuario">FLUJOS DE USUARIO</h1>
+<h2 id="1-login-y-acceso-al-dashboard">1. Login y acceso al dashboard</h2>
+<ol>
+<li>Usuario abre aplicación</li>
+<li>Se muestra <code>LoginForm</code></li>
+<li>Usuario introduce email y contraseña</li>
+<li>Click en "Acceder"</li>
+<li>POST a <code>/api/login</code> con credenciales</li>
+<li>Odoo valida y retorna JWT</li>
+<li>Frontend decodifica token y valida rol 'admin'</li>
+<li>Si es admin: navega a <code>Home</code> (dashboard)</li>
+<li>Si no es admin: muestra error "Acceso denegado"</li>
+</ol>
+<h2 id="2-crear-una-nueva-serie">2. Crear una nueva serie</h2>
+<ol>
+<li>Usuario está en <code>Home</code> (dashboard)</li>
+<li>Completa formulario inline: título y descripción</li>
+<li>Click en "Crear Serie"</li>
+<li>POST a <code>/catalogo/series</code> con datos</li>
+<li>Spring Boot crea serie en base de datos</li>
+<li>Frontend refresca listado de series</li>
+<li>Nueva serie aparece en el dashboard</li>
+</ol>
+<h2 id="3-subir-un-nuevo-episodio">3. Subir un nuevo episodio</h2>
+<ol>
+<li>Usuario navega a "Subir contenido" desde sidebar</li>
+<li>Se muestra <code>UploadForm</code></li>
+<li>Usuario selecciona archivo de video</li>
+<li>Completa metadatos: título, descripción, temporada, episodio, serie</li>
+<li>Click en "Subir Video"</li>
+<li>POST multipart a <code>/multimedia/api/videolist/upload</code></li>
+<li>Servidor multimedia responde con <code>videoId</code> y <code>websocketUrl</code></li>
+<li>Frontend conecta WebSocket para recibir progreso</li>
+<li>Servidor procesa video en background:</li>
+<li>Extrae metadatos (30%)</li>
+<li>Genera miniatura (40%)</li>
+<li>Convierte a HLS con FFmpeg (45-95%)</li>
+<li>Completa procesamiento (100%)</li>
+<li>Frontend muestra barra de progreso en tiempo real</li>
+<li>Al completar, video queda disponible en el servidor multimedia</li>
+<li>Usuario navega a detalle de serie para ver el nuevo episodio</li>
+</ol>
+<h2 id="4-editar-un-episodio-existente">4. Editar un episodio existente</h2>
+<ol>
+<li>Usuario navega a detalle de serie desde <code>Home</code></li>
+<li>Se muestra <code>SerieDetail</code> con listado de episodios</li>
+<li>Usuario hace click en "Editar" en un episodio</li>
+<li>Se abre modal <code>VideoEditor</code> con datos actuales</li>
+<li>Usuario modifica campos (título, descripción, temporada, episodio)</li>
+<li>Click en "Guardar"</li>
+<li>PATCH a <code>/catalogo/videos/{id}</code> con campos actualizados</li>
+<li>Spring Boot actualiza registro en base de datos</li>
+<li>Modal se cierra y <code>SerieDetail</code> refresca listado</li>
+<li>Cambios se reflejan inmediatamente</li>
+</ol>
+<h2 id="5-eliminar-un-episodio">5. Eliminar un episodio</h2>
+<ol>
+<li>Usuario está en <code>SerieDetail</code> viendo episodios</li>
+<li>Click en "Editar" en un episodio</li>
+<li>En modal <code>VideoEditor</code>, click en "Eliminar"</li>
+<li>Confirmación: "¿Seguro que quieres eliminar este episodio?"</li>
+<li>Usuario confirma</li>
+<li><strong>Eliminación dual</strong>:</li>
+<li>DELETE a <code>/catalogo/videos/{id}</code> (elimina registro en BD)</li>
+<li>DELETE a <code>/multimedia/api/videolist/delete/{id}</code> (elimina archivos físicos)</li>
+<li>Servidor multimedia elimina:</li>
+<li><code>/public/videos/{id}/</code> (directorio con segmentos HLS)</li>
+<li><code>/public/thumbnails/{id}.png</code></li>
+<li>Modal se cierra y <code>SerieDetail</code> refresca listado</li>
+<li>Episodio desaparece del catálogo</li>
+</ol>
+<p><strong>Nota crítica</strong>: La eliminación dual garantiza que no queden archivos huérfanos en el servidor multimedia.</p>
+<h2 id="6-actualizar-miniatura-de-una-serie">6. Actualizar miniatura de una serie</h2>
+<ol>
+<li>Usuario navega a "Subir contenido"</li>
+<li>En sección "Subir miniatura de serie"</li>
+<li>Selecciona archivo PNG</li>
+<li>Selecciona serie del dropdown</li>
+<li>Click en "Subir Miniatura"</li>
+<li>POST multipart a <code>/multimedia/api/serielist/upload</code></li>
+<li>Servidor guarda imagen y retorna <code>idThumb</code></li>
+<li>Frontend hace PATCH a <code>/catalogo/series/{id}</code> con nuevo <code>idThumb</code></li>
+<li>Spring Boot actualiza registro</li>
+<li>Miniatura actualizada se refleja en el catálogo</li>
+</ol>
+<h2 id="configuracion">Configuración</h2>
+<h3 id="viteconfigjs">vite.config.js</h3>
+<p>Verificar que los proxies apunten a las URLs correctas de los servicios backend:</p>
+<pre><code class="language-javascript">server: {
+  proxy: {
+    '/api': { target: 'http://localhost:8069', changeOrigin: true },
+    '/catalogo': { target: 'https://localhost:8090', changeOrigin: true, secure: false },
+    '/multimedia': { target: 'http://localhost:8080', changeOrigin: true }
+  }
+}
+</code></pre>
+<h2 id="vue-3-composition-api">Vue 3 Composition API</h2>
+<p><strong>Ventajas</strong>:
+- Mejor organización de lógica reactiva
+- Reutilización de código mediante composables
+- TypeScript-friendly (aunque no se usa en este proyecto)
+- Mejor tree-shaking</p>
+<p><strong>Funciones principales utilizadas</strong>:
+- <code>ref</code>: Estado reactivo primitivo
+- <code>reactive</code>: Estado reactivo de objetos
+- <code>computed</code>: Propiedades computadas
+- <code>watch</code>: Observadores de cambios
+- <code>onMounted</code>: Hook de ciclo de vida</p>
+<h2 id="vite">Vite</h2>
+<p><strong>Características utilizadas</strong>:
+- Dev server con proxy para evitar CORS
+- Build de producción con minificación
+- Plugin de Vue para SFC</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
